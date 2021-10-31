@@ -1,4 +1,4 @@
-# my_app
+# The Colour App
 
 A new Flutter project.
 
