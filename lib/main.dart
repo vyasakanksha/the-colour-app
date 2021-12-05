@@ -16,11 +16,15 @@ class ColourApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: primary,
-      ),
+      theme: buildTheme(),
       title: Strings.appName,
       home: HomeScreen(),
+    );
+  }
+
+  ThemeData buildTheme() {
+    return ThemeData(
+      primaryColor: primary,
     );
   }
 }
