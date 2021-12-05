@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
-import 'colour.dart';
+import 'package:my_app/consts/colours.dart';
 
-void main() => runApp(MyApp());
+// Consts
+import 'package:my_app/consts/strings.dart' as Strings;
 
-class MyApp extends StatelessWidget {
+// Screens
+import 'package:my_app/screens/home/screen.dart';
+
+void main() => runApp(
+      ColourApp(),
+    );
+
+class ColourApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'The Color App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Pick a Colour'),
-        ),
-        body: const Center(
-          child: MyWidget(),
-        ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: primary,
       ),
+      title: Strings.appName,
+      home: HomeScreen(),
     );
   }
 }
