@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/consts/colours.dart';
 
 // Consts
+import 'package:my_app/consts/colours.dart' as Colours;
 import 'package:my_app/consts/strings.dart' as Strings;
 
 // Screens
@@ -24,7 +24,7 @@ class ColourApp extends StatelessWidget {
 
   ThemeData buildTheme() {
     return ThemeData(
-      primaryColor: primary,
+      primaryColor: Colours.primary,
     );
   }
 }
