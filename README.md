@@ -12,7 +12,7 @@ I have included instructions for VS code, but feel free to go ahead with any tex
 https://code.visualstudio.com/docs/editor/github
 
 Install the following extensions: 
-
+Flutter
 
 ### Install Github 
 
@@ -25,7 +25,7 @@ STOP HERE
 
 ### Clone this repository to start interacting with the code
 
-Follow the instructions on this page to clone the repository. The repo name is ``` ```
+Follow the instructions on this page to clone the repository. The repo name is ```vyasakanksha/the-colour-app```
 
 https://code.visualstudio.com/docs/editor/github
 
