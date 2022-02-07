@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
 class ColourWidget extends StatelessWidget {
   final Color colour;
-  const ColourWidget({
+  final _logger = Logger();
+
+  ColourWidget({
     Key? key,
     required this.colour,
   }) : super(key: key);
@@ -10,7 +13,7 @@ class ColourWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => print("$colour tapped."),
+      onTap: () => _logger.d("$colour tapped."),
       child: Container(
         decoration: BoxDecoration(
           color: colour,

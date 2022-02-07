@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
+import 'package:logger/logger.dart';
+import 'package:my_app/app/app.locator.dart';
+import 'package:my_app/app/app.router.dart';
+import 'package:my_app/screens/home/services/authentication_service.dart';
+
 // Consts
 import 'package:my_app/consts/colours.dart' as Colours;
 import 'package:my_app/consts/strings.dart' as Strings;
@@ -9,15 +14,18 @@ import 'package:my_app/consts/strings.dart' as Strings;
 import 'package:my_app/screens/home/widgets/colour.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({
+  HomeScreen({
     Key? key,
   }) : super(key: key);
+
+  final _logger = Logger();
 
   /// Determine the current position of the device.
   ///
   /// When the location services are not enabled or permissions
   /// are denied the `Future` will return an error.
   Future<Position> _determinePosition() async {
+    _logger.d("position logic");
     bool serviceEnabled;
     LocationPermission permission;
 
@@ -27,6 +35,7 @@ class HomeScreen extends StatelessWidget {
       // Location services are not enabled don't continue
       // accessing the position and request users of the
       // App to enable the location services.
+      _logger.d("location disabeled");
       return Future.error('Location services are disabled.');
     }
 
@@ -70,7 +79,7 @@ class HomeScreen extends StatelessWidget {
           future: _determinePosition(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              print(snapshot.data.toString() +
+              _logger.d(snapshot.data.toString() +
                   " " +
                   snapshot.data!.altitude.toString() +
                   " " +
