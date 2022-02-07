@@ -4,7 +4,6 @@ import 'package:my_app/app/app.locator.dart';
 import 'package:localstore/localstore.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:stacked_themes/stacked_themes.dart';
 
 // Consts
 import 'package:my_app/consts/colours.dart' as Colours;
