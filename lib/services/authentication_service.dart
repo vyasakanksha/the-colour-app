@@ -3,7 +3,7 @@ import 'package:logger/logger.dart';
 import 'package:postgrest/src/postgrest_response.dart';
 import 'package:my_app/app/app.locator.dart';
 import 'package:my_app/app/supabase_api.dart';
-import 'package:my_app/screens/home/services/local_storage_service.dart';
+import 'package:my_app/services/local_storage_service.dart';
 import 'package:my_app/data/models/user.dart';
 
 class AuthenticationService {

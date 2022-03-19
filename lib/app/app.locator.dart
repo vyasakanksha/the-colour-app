@@ -10,8 +10,8 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-import '../screens/home/services/authentication_service.dart';
-import '../screens/home/services/local_storage_service.dart';
+import '../services/authentication_service.dart';
+import '../services/local_storage_service.dart';
 
 final locator = StackedLocator.instance;
 
