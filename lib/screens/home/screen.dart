@@ -4,21 +4,29 @@ import 'package:geolocator/geolocator.dart';
 import 'package:logger/logger.dart';
 import 'package:my_app/app/app.locator.dart';
 import 'package:my_app/app/app.router.dart';
-import 'package:my_app/screens/home/services/authentication_service.dart';
+import 'package:my_app/services/authentication_service.dart';
 
 // Consts
 import 'package:my_app/consts/colours.dart' as Colours;
 import 'package:my_app/consts/strings.dart' as Strings;
 
 // Widgets
-import 'package:my_app/screens/home/widgets/colour.dart';
+import 'package:my_app/screens/home/widgets/three_colour.dart';
+import 'package:my_app/screens/home/widgets/full_colour.dart';
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({
-    Key? key,
-  }) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  HomeScreenState createState() => HomeScreenState();
+}
+
+class HomeScreenState extends State<HomeScreen> {
+  bool _isSelected = false;
+  late Color _colourSelected;
 
   final _logger = Logger();
+  final _authService = locator<AuthenticationService>();
 
   /// Determine the current position of the device.
   ///
@@ -66,10 +74,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(Strings.pickAColour),
-      ),
       body: buildBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.black,
+        child: const Text("?"),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 
@@ -85,27 +98,67 @@ class HomeScreen extends StatelessWidget {
                   " " +
                   snapshot.data!.speed.toString());
             }
-            return Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Expanded(
-                  child: ColourWidget(
-                    colour: Colours.black,
+            if (_isSelected == false) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text(
+                    Strings.appName,
+                    style: TextStyle(
+                      height: 0.05,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: ColourWidget(
-                    colour: Colours.green,
+                  ThreeColourComponenetWidget(
+                      onSelected: _handleColourSelected,
+                      colour: Colours.mainred),
+                  const Text(
+                    Strings.pickAColour,
+                    style: TextStyle(
+                      height: 0.05,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: ColourWidget(
-                    colour: Colours.red,
+                  ThreeColourComponenetWidget(
+                    colour: Colours.mainblue,
+                    onSelected: _handleColourSelected,
                   ),
-                ),
-              ],
-            );
+                  ThreeColourComponenetWidget(
+                    colour: Colours.mainbiege,
+                    onSelected: _handleColourSelected,
+                  ),
+                ],
+              );
+            } else {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FullColourWidget(
+                    colour: _colourSelected,
+                    timerExpired: _handleTimerExpired,
+                  ),
+                ],
+              );
+            }
           }),
     );
+  }
+
+  void _handleColourSelected(Color colourVal) {
+    setState(() {
+      _isSelected = true;
+      _colourSelected = colourVal;
+    });
+    _logger.d("$_colourSelected selected.");
+    _logger.d(" isSelected is $_isSelected");
+  }
+
+  void _handleTimerExpired() {
+    setState(() {
+      _isSelected = false;
+    });
+    _logger.d(" isSelected is $_isSelected");
   }
 }
