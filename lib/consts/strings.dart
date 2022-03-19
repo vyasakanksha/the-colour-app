@@ -1,3 +1,5 @@
-const String appName = "Colour";
+const String appName = "the colour app";
 
-const String pickAColour = "Pick a colour";
+const String pickAColour = "pick a colour";
+
+const String appNameTitle = "THE COLOUR APP";
