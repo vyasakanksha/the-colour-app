@@ -29,23 +29,10 @@ class StackedRouter extends RouterBase {
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, StackedRouteFactory>{
     HomeScreen: (data) {
-      var args = data.getArgs<HomeScreenArguments>(
-        orElse: () => HomeScreenArguments(),
-      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => HomeScreen(key: args.key),
+        builder: (context) => const HomeScreen(),
         settings: data,
       );
     },
   };
-}
-
-/// ************************************************************************
-/// Arguments holder classes
-/// *************************************************************************
-
-/// HomeScreen arguments holder class
-class HomeScreenArguments {
-  final Key? key;
-  HomeScreenArguments({this.key});
 }

@@ -31,9 +31,9 @@ class FullColourWidgetState extends State<FullColourWidget> {
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder<Duration>(
-        duration: Duration(minutes: 0, seconds: 2),
-        tween:
-            Tween(begin: Duration(minutes: 0, seconds: 2), end: Duration.zero),
+        duration: const Duration(minutes: 0, seconds: 10),
+        tween: Tween(
+            begin: const Duration(minutes: 0, seconds: 10), end: Duration.zero),
         onEnd: () {
           widget._handleTimerExpired();
           widget.timerExpired();
@@ -48,7 +48,7 @@ class FullColourWidgetState extends State<FullColourWidget> {
               width: MediaQuery.of(context).size.width * 0.85,
               decoration: BoxDecoration(
                   color: widget.colour,
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
+                  borderRadius: const BorderRadius.all(Radius.circular(20))),
               child: Center(
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

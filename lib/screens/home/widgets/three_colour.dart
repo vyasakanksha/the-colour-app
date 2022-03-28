@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_app/consts/strings.dart' as Strings;
-import 'package:my_app/consts/colours.dart' as Colours;
-import 'dart:async';
-
-import 'package:my_app/screens/home/screen.dart';
 
 class ThreeColourComponenetWidget extends StatelessWidget {
   final Color colour;
