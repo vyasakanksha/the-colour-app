@@ -1,5 +1,5 @@
 name: my_app
-description: A new Flutter project.
+description: The Colour App.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -45,6 +45,7 @@ dependencies:
   localstore: ^1.2.1
   json_annotation: ^4.4.0
   google_fonts: ^2.3.1
+  uuid: ^3.0.6
 
 
 dev_dependencies:
@@ -53,8 +54,10 @@ dev_dependencies:
   stacked_generator: ^0.5.7
   json_serializable: ^6.1.4
   freezed: ^1.1.0
+  flutter_launcher_icons: ^0.9.0
   flutter_test:
     sdk: flutter
+    
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
