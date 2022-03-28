@@ -22,9 +22,14 @@ AppUser _$AppUserFromJson(Map<String, dynamic> json) {
 class _$AppUserTearOff {
   const _$AppUserTearOff();
 
-  _AppUser call({required String id}) {
+  _AppUser call(
+      {required String id,
+      @JsonKey(name: 'time_in') required DateTime timeIn,
+      @JsonKey(name: 'time_out') required DateTime timeOut}) {
     return _AppUser(
       id: id,
+      timeIn: timeIn,
+      timeOut: timeOut,
     );
   }
 
@@ -38,7 +43,13 @@ const $AppUser = _$AppUserTearOff();
 
 /// @nodoc
 mixin _$AppUser {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(name: 'time_in')
+  DateTime get timeIn =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(name: 'time_out')
+  DateTime get timeOut => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +60,10 @@ mixin _$AppUser {
 abstract class $AppUserCopyWith<$Res> {
   factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
       _$AppUserCopyWithImpl<$Res>;
-  $Res call({String id});
+  $Res call(
+      {String id,
+      @JsonKey(name: 'time_in') DateTime timeIn,
+      @JsonKey(name: 'time_out') DateTime timeOut});
 }
 
 /// @nodoc
@@ -63,12 +77,22 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
+    Object? timeIn = freezed,
+    Object? timeOut = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      timeIn: timeIn == freezed
+          ? _value.timeIn
+          : timeIn // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      timeOut: timeOut == freezed
+          ? _value.timeOut
+          : timeOut // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -78,7 +102,10 @@ abstract class _$AppUserCopyWith<$Res> implements $AppUserCopyWith<$Res> {
   factory _$AppUserCopyWith(_AppUser value, $Res Function(_AppUser) then) =
       __$AppUserCopyWithImpl<$Res>;
   @override
-  $Res call({String id});
+  $Res call(
+      {String id,
+      @JsonKey(name: 'time_in') DateTime timeIn,
+      @JsonKey(name: 'time_out') DateTime timeOut});
 }
 
 /// @nodoc
@@ -93,12 +120,22 @@ class __$AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? timeIn = freezed,
+    Object? timeOut = freezed,
   }) {
     return _then(_AppUser(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      timeIn: timeIn == freezed
+          ? _value.timeIn
+          : timeIn // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      timeOut: timeOut == freezed
+          ? _value.timeOut
+          : timeOut // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -106,17 +143,26 @@ class __$AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppUser implements _AppUser {
-  const _$_AppUser({required this.id});
+  const _$_AppUser(
+      {required this.id,
+      @JsonKey(name: 'time_in') required this.timeIn,
+      @JsonKey(name: 'time_out') required this.timeOut});
 
   factory _$_AppUser.fromJson(Map<String, dynamic> json) =>
       _$$_AppUserFromJson(json);
 
   @override
   final String id;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(name: 'time_in')
+  final DateTime timeIn;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(name: 'time_out')
+  final DateTime timeOut;
 
   @override
   String toString() {
-    return 'AppUser(id: $id)';
+    return 'AppUser(id: $id, timeIn: $timeIn, timeOut: $timeOut)';
   }
 
   @override
@@ -124,12 +170,17 @@ class _$_AppUser implements _AppUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _AppUser &&
-            const DeepCollectionEquality().equals(other.id, id));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.timeIn, timeIn) &&
+            const DeepCollectionEquality().equals(other.timeOut, timeOut));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(timeIn),
+      const DeepCollectionEquality().hash(timeOut));
 
   @JsonKey(ignore: true)
   @override
@@ -143,12 +194,21 @@ class _$_AppUser implements _AppUser {
 }
 
 abstract class _AppUser implements AppUser {
-  const factory _AppUser({required String id}) = _$_AppUser;
+  const factory _AppUser(
+      {required String id,
+      @JsonKey(name: 'time_in') required DateTime timeIn,
+      @JsonKey(name: 'time_out') required DateTime timeOut}) = _$_AppUser;
 
   factory _AppUser.fromJson(Map<String, dynamic> json) = _$_AppUser.fromJson;
 
   @override
   String get id;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(name: 'time_in')
+  DateTime get timeIn;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(name: 'time_out')
+  DateTime get timeOut;
   @override
   @JsonKey(ignore: true)
   _$AppUserCopyWith<_AppUser> get copyWith =>
