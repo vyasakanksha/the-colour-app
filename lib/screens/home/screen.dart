@@ -2,27 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
 import 'package:logger/logger.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:my_app/app/app.locator.dart';
-import 'package:my_app/app/app.router.dart';
-import 'package:uuid/uuid.dart';
 import 'package:async/async.dart';
 
 // Consts
-import 'package:my_app/consts/colours.dart' as Colours;
-import 'package:my_app/consts/strings.dart' as Strings;
-import 'package:my_app/data/models/user.dart';
-import 'package:my_app/data/models/location.dart';
-import 'package:my_app/data/models/selected_colour.dart';
+import 'package:my_app/consts/colours.dart' as _colours;
+import 'package:my_app/consts/strings.dart' as _strings;
 
 // Widgets
 import 'package:my_app/screens/home/widgets/three_colour.dart';
 import 'package:my_app/screens/home/widgets/full_colour.dart';
 
 // Services
-import 'package:my_app/services/data_collection/user.dart';
-import 'package:my_app/services/data_collection/location.dart';
-import 'package:my_app/services/data_collection/selected_colour.dart';
-import 'package:my_app/services/local_storage_service.dart';
+import 'package:my_app/services/database_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,18 +26,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreen> {
-  var uuid = Uuid();
-
-  final _userService = locator<UserService>();
-  final _locationService = locator<LocationService>();
-  final _localStorageService = locator<LocalStorageService>();
-  final _selectedColourService = locator<SelectedColourService>();
+  final _databaseService = locator<DatabaseService>();
 
   bool _isSelected = false;
   late Color _colourSelected;
-  late DateTime _timeIn;
-  late DateTime _timeOut;
-  var _uuid;
+  dynamic _uuid;
+  late DateTime? timestamp;
+  late DateTime _expiryTime;
 
   final _logger = Logger();
 
@@ -53,9 +42,15 @@ class HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _memoizer = AsyncMemoizer();
-    _uuid = uuid.v1();
-    _timeIn = DateTime.now();
-    _createUserSession();
+    _getSession();
+
+    // _databaseService.addDroplet().then((refID) {
+    //   // _uuid = base.id;
+
+    //   setState(() {
+    //     _uuid = refID;
+    //   });
+    // });
   }
 
   /// Determine the current position of the device.
@@ -63,7 +58,7 @@ class HomeScreenState extends State<HomeScreen> {
   /// When the location services are not enabled or permissions
   /// are denied the `Future` will return an error.
   Future<dynamic> _determinePosition() async {
-    return this._memoizer.runOnce(() async {
+    return _memoizer.runOnce(() async {
       _logger.d("position logic");
       bool serviceEnabled;
       LocationPermission permission;
@@ -74,9 +69,9 @@ class HomeScreenState extends State<HomeScreen> {
         // Location services are not enabled don't continue
         // accessing the position and request users of the
         // App to enable the location services.
-        _logger.d("location disabeled");
-        _locationService.createLocation(_uuid.toString(), false, {});
-        return Future.error('Location services are disabled.');
+        _logger.d('Location services are disabled.');
+        _databaseService.addLocationData(false, {}, _uuid);
+        return false;
       }
 
       permission = await Geolocator.checkPermission();
@@ -88,16 +83,18 @@ class HomeScreenState extends State<HomeScreen> {
           // Android's shouldShowRequestPermissionRationale
           // returned true. According to Android guidelines
           // your App should show an explanatory UI now.
-          _locationService.createLocation(_uuid.toString(), false, {});
-          return Future.error('Location permissions are denied');
+          _databaseService.addLocationData(false, {}, _uuid);
+          _logger.d('Location permissions are denied');
+          return false;
         }
       }
 
       if (permission == LocationPermission.deniedForever) {
         // Permissions are denied forever, handle appropriately.
-        _locationService.createLocation(_uuid.toString(), false, {});
-        return Future.error(
+        _databaseService.addLocationData(false, {}, _uuid);
+        _logger.d(
             'Location permissions are permanently denied, we cannot request permissions.');
+        return false;
       }
 
       // When we reach here, permissions are granted and we can
@@ -126,21 +123,22 @@ class HomeScreenState extends State<HomeScreen> {
       child: FutureBuilder<dynamic>(
           future: _determinePosition(),
           builder: (context, snapshot) {
+            _logger.d("snapshot", snapshot.data);
             if (snapshot.hasData) {
-              _logger.d(snapshot.data.toString() +
-                  " " +
-                  snapshot.data!.altitude.toString() +
-                  " " +
-                  snapshot.data!.speed.toString());
-              _locationService.createLocation(
-                  _uuid.toString(), true, snapshot.data!.toJson());
+              _logger.d(snapshot.data);
+              if (snapshot.data == false) {
+                _databaseService.addLocationData(false, {}, _uuid);
+              } else {
+                _databaseService.addLocationData(
+                    true, snapshot.data!.toJson(), _uuid);
+              }
             }
             if (_isSelected == false) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const Text(
-                    Strings.appName,
+                    _strings.appName,
                     style: TextStyle(
                       height: 0.05,
                       fontWeight: FontWeight.bold,
@@ -148,10 +146,10 @@ class HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   ThreeColourComponenetWidget(
-                      onSelected: _handleColourSelected,
-                      colour: Colours.mainred),
+                      onSelected: _triggerColourSelected,
+                      colour: _colours.mainred),
                   const Text(
-                    Strings.pickAColour,
+                    _strings.pickAColour,
                     style: TextStyle(
                       height: 0.05,
                       fontWeight: FontWeight.bold,
@@ -159,13 +157,11 @@ class HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   ThreeColourComponenetWidget(
-                    colour: Colours.mainblue,
-                    onSelected: _handleColourSelected,
-                  ),
+                      colour: _colours.mainblue,
+                      onSelected: _triggerColourSelected),
                   ThreeColourComponenetWidget(
-                    colour: Colours.mainbiege,
-                    onSelected: _handleColourSelected,
-                  ),
+                      colour: _colours.mainbiege,
+                      onSelected: _triggerColourSelected),
                 ],
               );
             } else {
@@ -173,6 +169,7 @@ class HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   FullColourWidget(
+                    expiryTime: _expiryTime,
                     colour: _colourSelected,
                     timerExpired: _handleTimerExpired,
                   ),
@@ -183,43 +180,101 @@ class HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _handleColourSelected(Color colourVal) {
+  void _triggerColourSelected(Color colourVal) async {
+    DateTime timestamp = DateTime.now();
+    _handleColourSelected(colourVal, timestamp);
+  }
+
+  void _handleColourSelected(Color colourVal, DateTime timestamp) async {
     setState(() {
       _isSelected = true;
       _colourSelected = colourVal;
+      _expiryTime = DateTime(timestamp.year, timestamp.month, timestamp.day,
+          timestamp.hour, timestamp.minute + 1, timestamp.second);
     });
+
     _logger.d("$_colourSelected selected.");
     _logger.d(" isSelected is $_isSelected");
-    _selectedColourService.createColour(_uuid.toString(), colourVal);
+    _logger.d(" uudi is $_uuid");
+    _databaseService.addColourData(colourVal, _uuid);
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('expiry_time', _expiryTime.toString());
+    prefs.setInt('colour_selected', _colourSelected.value);
+    prefs.setBool('is_selected', _isSelected);
   }
 
-  void _handleTimerExpired() {
+  void _handleTimerExpired() async {
+    _databaseService.addDroplet().then((refID) {
+      // _uuid = base.id;
+
+      setState(() {
+        _uuid = refID;
+      });
+    });
+
     setState(() {
       _isSelected = false;
     });
     _logger.d(" isSelected is $_isSelected");
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('expiry_time', "");
+    prefs.setInt('colour_selected', 0);
+    prefs.setBool('is_selected', false);
+    prefs.setString('uuid', _uuid);
   }
 
-  Future<void> _createUserSession() async {
-    // _localStorageService.setItem('selected', true.toString());
-    // _localStorageService.setItem('uuid', _uuid.toString());
-    // _localStorageService.setItem('colour', _colourSelected.toString());
-    // _localStorageService.setItem('time', )
-    _timeOut = DateTime.now();
+  void _getSession() async {
+    _logger.d("RETRIVE STATE");
+    DateTime currentTimestamp = DateTime.now();
 
-    final response = await _userService.create(
-      AppUser(
-        id: _uuid.toString(),
-        timeIn: _timeIn,
-        timeOut: _timeOut,
-      ).toJson(),
-    );
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    _expiryTime = DateTime.parse(prefs.getString('expiry_time') ?? "");
+    _colourSelected = Color(prefs.getInt('colour_selected') ?? 0);
+    _isSelected = prefs.getBool('is_selected') ?? false;
+    _uuid = prefs.getString('uuid') ?? " ";
 
-    if (response.error != null) {
-      _logger.e(response.error!.message);
-      return;
+    if (_expiryTime.isBefore(DateTime.now()) || _isSelected == false) {
+      _handleTimerExpired();
+    } else {
+      setState(() {
+        _expiryTime = _expiryTime;
+        _colourSelected = _colourSelected;
+        _isSelected = _isSelected;
+        _uuid = _uuid;
+      });
+      await FirebaseAnalytics.instance.logEvent(
+        name: "Retrive_State",
+        parameters: {
+          "timestamp": timestamp,
+          "colourSelected": _colourSelected,
+          "_isSelected": _isSelected,
+        },
+      );
+      _logger.d("$timestamp and $_colourSelected from shared.");
     }
-
-    final data = AppUser.fromJson(response.data[0]);
   }
+
+  // Future<void> _createUserSession() async {
+  //   // _localStorageService.setItem('selected', true.toString());
+  //   // _localStorageService.setItem('uuid', _uuid.toString());
+  //   // _localStorageService.setItem('colour', _colourSelected.toString());
+  //   // _localStorageService.setItem('time', )
+  //   _timeOut = DateTime.now();
+
+  //   final response = await _databaseService.create(
+  //     AppUser(
+  //       id: _uuid.toString(),
+  //       timeIn: _timeIn,
+  //       timeOut: _timeOut,
+  //     ).toJson(),
+  //   );
+
+  //   if (response.error != null) {
+  //     _logger.e(response.error!.message);
+  //     return;
+  //   }
+
+  //   final data = AppUser.fromJson(response.data[0]);
+  // }
 }
