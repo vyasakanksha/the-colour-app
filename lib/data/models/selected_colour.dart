@@ -1,18 +1,20 @@
-import 'package:my_app/consts/colours.dart' as Colours;
-import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/widgets.dart';
 
-part 'selected_colour.freezed.dart';
-part 'selected_colour.g.dart';
+class Colour {
+  final Color colour;
+  final DateTime timestamp;
 
-@freezed
-class SelectedColour with _$SelectedColour {
-  const factory SelectedColour(
-      {
-      // ignore: invalid_annotation_target
-      @JsonKey(name: 'id') required String id,
-      required String colour}) = _SelectedColour;
+  Colour({required this.colour, required this.timestamp});
 
-  factory SelectedColour.fromJson(Map<String, dynamic> json) =>
-      _$SelectedColourFromJson(json);
+  Map<String, dynamic> toMap() {
+    return {
+      'colour':
+          '#${(colour.value & 0xFFFFFF).toRadixString(16).padLeft(6, '0').toUpperCase()}',
+      'timestamp': timestamp,
+    };
+  }
+
+  Colour.fromMap(Map<String, dynamic> colourMap)
+      : colour = colourMap["details"],
+        timestamp = colourMap["timestamp"];
 }

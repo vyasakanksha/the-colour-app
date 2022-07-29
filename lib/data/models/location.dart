@@ -1,21 +1,19 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:geolocator/geolocator.dart';
 
-part 'location.freezed.dart';
-part 'location.g.dart';
+class Location {
+  final Map<String, dynamic> details;
+  final bool permission;
 
-@freezed
-class Location with _$Location {
-  const factory Location({
-    // ignore: invalid_annotation_target
-    @JsonKey(name: 'id') required String id,
-    // ignore: invalid_annotation_target
-    @JsonKey(name: 'time_in') required DateTime timeIn,
-    // ignore: invalid_annotation_target
-    @JsonKey(name: 'time_out') required DateTime timeOut,
-    required Map<String, dynamic> details,
-    required bool permission,
-  }) = _Location;
+  Location({required this.permission, required this.details});
 
-  factory Location.fromJson(Map<String, dynamic> json) =>
-      _$LocationFromJson(json);
+  Map<String, dynamic> toMap() {
+    return {
+      'details': details,
+      'permission': permission,
+    };
+  }
+
+  Location.fromMap(Map<String, dynamic> locationMap)
+      : details = locationMap["details"],
+        permission = locationMap["permission"];
 }

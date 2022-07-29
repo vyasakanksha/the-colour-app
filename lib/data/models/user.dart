@@ -1,17 +1,13 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+class AppUser {
+  final String info;
 
-part 'user.freezed.dart';
-part 'user.g.dart';
+  AppUser({required this.info});
 
-@freezed
-class AppUser with _$AppUser {
-  const factory AppUser(
-      {required String id,
-      // ignore: invalid_annotation_target
-      @JsonKey(name: 'time_in') required DateTime timeIn,
-      // ignore: invalid_annotation_target
-      @JsonKey(name: 'time_out') required DateTime timeOut}) = _AppUser;
+  Map<String, dynamic> toMap() {
+    return {
+      'info': info,
+    };
+  }
 
-  factory AppUser.fromJson(Map<String, dynamic> json) =>
-      _$AppUserFromJson(json);
+  AppUser.fromMap(Map<String, dynamic> appUserMap) : info = appUserMap["info"];
 }
