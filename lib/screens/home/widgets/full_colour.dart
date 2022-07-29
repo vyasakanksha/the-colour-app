@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:logger/logger.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_app/consts/strings.dart' as Strings;
-import 'package:my_app/consts/colours.dart' as Colours;
-import 'dart:async';
-
-import 'package:my_app/screens/home/screen.dart';
+import 'package:my_app/consts/strings.dart' as _strings;
 
 class FullColourWidget extends StatefulWidget {
   final Color colour;
   final Function timerExpired;
+  final DateTime expiryTime;
 
   void _handleTimerExpired() {
     timerExpired;
@@ -19,6 +19,7 @@ class FullColourWidget extends StatefulWidget {
     Key? key,
     required this.colour,
     required this.timerExpired,
+    required this.expiryTime,
   }) : super(key: key);
 
   @override
@@ -30,10 +31,19 @@ class FullColourWidgetState extends State<FullColourWidget> {
 
   @override
   Widget build(BuildContext context) {
+    var temp = widget.expiryTime;
+    _logger.d("$temp exripy time");
+    final difference = widget.expiryTime.difference(DateTime.now());
+    final int difference_hr = difference.inHours;
+    final int difference_min = difference.inMinutes;
+    final int difference_sec =
+        difference.inSeconds - (difference.inMinutes * 60);
+    _logger.d("$difference_hr Mins: $difference_min Sec: $difference_sec");
     return TweenAnimationBuilder<Duration>(
-        duration: const Duration(minutes: 0, seconds: 10),
+        duration: Duration(minutes: difference_min, seconds: difference_sec),
         tween: Tween(
-            begin: const Duration(minutes: 0, seconds: 10), end: Duration.zero),
+            begin: Duration(minutes: difference_min, seconds: difference_sec),
+            end: Duration.zero),
         onEnd: () {
           widget._handleTimerExpired();
           widget.timerExpired();
@@ -71,7 +81,7 @@ class FullColourWidgetState extends State<FullColourWidget> {
                         const SizedBox(width: 10),
                         Flexible(
                           child: Text(
-                            Strings.appNameTitle,
+                            _strings.appNameTitle,
                             style: GoogleFonts.lato(
                                 textStyle: const TextStyle(
                               fontSize: 60,
