@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:timezone/timezone.dart' as tz;
+import 'package:device_info_plus/device_info_plus.dart';
 
 import 'package:logger/logger.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -17,6 +20,7 @@ import 'package:my_app/screens/home/widgets/full_colour.dart';
 
 // Services
 import 'package:my_app/services/database_service.dart';
+import 'package:my_app/services/notification_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -38,11 +42,61 @@ class HomeScreenState extends State<HomeScreen> {
 
   late AsyncMemoizer _memoizer;
 
+  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+
   @override
   void initState() {
     super.initState();
     _memoizer = AsyncMemoizer();
+    SharedPreferences.getInstance().then((SharedPreferences sp) {
+      SharedPreferences prefs = sp;
+      _logger.d("INIT FUNCTION");
+      final keys = prefs.getKeys();
+
+      final prefsMap = Map<String, dynamic>();
+      for (String key in keys) {
+        prefsMap[key] = prefs.get(key);
+      }
+      _logger.d("SHARED PREF $prefsMap");
+      String? uuidRef = prefs.getString('uuid');
+      _logger.d("RETRIVE STATE uudi is 1 $uuidRef, 2 $_uuid");
+      if (uuidRef == null) {
+        _databaseService.addDroplet().then((refID) {
+          _logger.d("CREATE NEW UUID $refID");
+
+          setState(() {
+            _uuid = refID;
+          });
+          prefs.setString('uuid', _uuid);
+        });
+      } else {
+        setState(() {
+          _uuid = uuidRef;
+        });
+      }
+      _logger.d("RETRIVE STATE AFTER uudi is $_uuid");
+    });
     _getSession();
+
+    const AndroidInitializationSettings initializationSettingsAndroid =
+        AndroidInitializationSettings('@mipmap/ic_launcher');
+
+    //Initialization Settings for iOS
+    const IOSInitializationSettings initializationSettingsIOS =
+        IOSInitializationSettings(
+      requestSoundPermission: false,
+      requestBadgePermission: false,
+      requestAlertPermission: false,
+    );
+
+    //InitializationSettings for initializing settings for both platforms (Android & iOS)
+    const InitializationSettings initializationSettings =
+        InitializationSettings(
+            android: initializationSettingsAndroid,
+            iOS: initializationSettingsIOS);
+
+    flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+    flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
     // _databaseService.addDroplet().then((refID) {
     //   // _uuid = base.id;
@@ -109,7 +163,7 @@ class HomeScreenState extends State<HomeScreen> {
       body: buildBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // insert logic here
+          onInfoNotification();
         },
         backgroundColor: Colors.black,
         child: const Text("?"),
@@ -123,17 +177,30 @@ class HomeScreenState extends State<HomeScreen> {
       child: FutureBuilder<dynamic>(
           future: _determinePosition(),
           builder: (context, snapshot) {
-            _logger.d("snapshot", snapshot.data);
+            _logger.d("snapshop data, $snapshot $_uuid");
             if (snapshot.hasData) {
-              _logger.d(snapshot.data);
               if (snapshot.data == false) {
                 _databaseService.addLocationData(false, {}, _uuid);
               } else {
+                // var querySnapshot = snapshot.data;
+                // var result = Map.fromIterable(querySnapshot);
+                // Map<String, String> converted = {};
+                // for (var item in result.keys) {
+                //   converted[item.toString()] = result[item].toString();
+                // }
+
+                // _logger.d(
+                //   "SNAPSHOT DATA ITEM2 $result",
+                // );
+
                 _databaseService.addLocationData(
                     true, snapshot.data!.toJson(), _uuid);
               }
             }
             if (_isSelected == false) {
+              _logger.d(
+                "is selectd false $_isSelected",
+              );
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -165,6 +232,7 @@ class HomeScreenState extends State<HomeScreen> {
                 ],
               );
             } else {
+              _logger.d("is selectd true $_isSelected");
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -181,16 +249,29 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   void _triggerColourSelected(Color colourVal) async {
+    _logger.d("TRIGGER COLOR SELECTED");
+
+    // TimeZone
     DateTime timestamp = DateTime.now();
+    _databaseService.addTimeZoneData(timestamp.timeZoneName, _uuid);
+
+    // Device Details
+    final deviceInfoPlugin = DeviceInfoPlugin();
+    final deviceInfo = await deviceInfoPlugin.deviceInfo;
+    final map = deviceInfo.toMap();
+    _databaseService.addDeviceDetailsData(map, _uuid);
+
+    // Colour
     _handleColourSelected(colourVal, timestamp);
   }
 
   void _handleColourSelected(Color colourVal, DateTime timestamp) async {
+    _logger.d("COLOR SELECTED");
     setState(() {
       _isSelected = true;
       _colourSelected = colourVal;
       _expiryTime = DateTime(timestamp.year, timestamp.month, timestamp.day,
-          timestamp.hour, timestamp.minute + 1, timestamp.second);
+          timestamp.hour + 24, timestamp.minute, timestamp.second);
     });
 
     _logger.d("$_colourSelected selected.");
@@ -202,9 +283,11 @@ class HomeScreenState extends State<HomeScreen> {
     prefs.setString('expiry_time', _expiryTime.toString());
     prefs.setInt('colour_selected', _colourSelected.value);
     prefs.setBool('is_selected', _isSelected);
+    _showNotificationWithDefaultSound();
   }
 
   void _handleTimerExpired() async {
+    _logger.d("TIMER EXPIRED");
     _databaseService.addDroplet().then((refID) {
       // _uuid = base.id;
 
@@ -229,19 +312,20 @@ class HomeScreenState extends State<HomeScreen> {
     DateTime currentTimestamp = DateTime.now();
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    _expiryTime = DateTime.parse(prefs.getString('expiry_time') ?? "");
+    String? _expiryTimeTemp = prefs.getString('expiry_time');
+    if (_expiryTimeTemp != null) {
+      _expiryTime = DateTime.parse(prefs.getString('expiry_time') ?? "");
+    }
     _colourSelected = Color(prefs.getInt('colour_selected') ?? 0);
     _isSelected = prefs.getBool('is_selected') ?? false;
-    _uuid = prefs.getString('uuid') ?? " ";
 
-    if (_expiryTime.isBefore(DateTime.now()) || _isSelected == false) {
+    if (_expiryTimeTemp != null && _expiryTime.isBefore(DateTime.now())) {
       _handleTimerExpired();
     } else {
       setState(() {
         _expiryTime = _expiryTime;
         _colourSelected = _colourSelected;
         _isSelected = _isSelected;
-        _uuid = _uuid;
       });
       await FirebaseAnalytics.instance.logEvent(
         name: "Retrive_State",
@@ -253,6 +337,46 @@ class HomeScreenState extends State<HomeScreen> {
       );
       _logger.d("$timestamp and $_colourSelected from shared.");
     }
+  }
+
+  Future _getSessionInit() async {
+    return _memoizer.runOnce(() async {
+      if (_uuid == null) {
+        _logger.d(
+          "RETRIVE STATE INIT $_uuid",
+        );
+
+        SharedPreferences.getInstance().then((SharedPreferences sp) {
+          SharedPreferences prefs = sp;
+          _logger.d("RETRIVE STATE SP $sp");
+          final keys = prefs.getKeys();
+
+          final prefsMap = Map<String, dynamic>();
+          for (String key in keys) {
+            prefsMap[key] = prefs.get(key);
+          }
+
+          _logger.d("SHARED PREF $prefsMap");
+          String? uuidRef = prefs.getString('uuid');
+          _logger.d("RETRIVE STATE uudi is 1 $uuidRef, 2 $_uuid");
+          if (uuidRef == null) {
+            _databaseService.addDroplet().then((refID) {
+              _logger.d("CREATE NEW UUID $refID");
+
+              setState(() {
+                _uuid = refID;
+              });
+              prefs.setString('uuid', _uuid);
+            });
+          } else {
+            setState(() {
+              _uuid = uuidRef;
+            });
+          }
+          _logger.d("RETRIVE STATE AFTER uudi is $_uuid");
+        });
+      }
+    });
   }
 
   // Future<void> _createUserSession() async {
@@ -277,4 +401,47 @@ class HomeScreenState extends State<HomeScreen> {
 
   //   final data = AppUser.fromJson(response.data[0]);
   // }
+
+  void onInfoNotification() async {
+    showDialog(
+      context: context,
+      builder: (_) {
+        return const AlertDialog(
+          title: Text("So What is the Colour App?"),
+          content: Text(
+              "Every 24 hours you pick a colour. The app collects information about you, quietly, in the background. This is the same information that most other apps on your phone collect to optimize your buying patterns. In a few weeks digital compositions will appear on the app, where artists use data as random input to create dynamic, constantly evolving works of art. As new data comes in the old gets deleted, and is never used for anything else.\n\n\nTogether we are exploring our relationship with our personal data, and what ownership of personal data means in today's world. Hopefully though this project we can take some of that ownership back.\n\n\nStart picking colours, compositions will show up soon."),
+        );
+      },
+    );
+  }
+
+  Future _showNotificationWithDefaultSound() async {
+    const AndroidNotificationDetails? androidPlatformChannelSpecifics =
+        AndroidNotificationDetails('your channel id', 'your channel name',
+            channelDescription: 'your channel description',
+            importance: Importance.max,
+            priority: Priority.high);
+    const iOSPlatformChannelSpecifics = IOSNotificationDetails();
+    const platformChannelSpecifics = NotificationDetails(
+        android: androidPlatformChannelSpecifics,
+        iOS: iOSPlatformChannelSpecifics);
+
+    // await flutterLocalNotificationsPlugin.show(
+    //   0,
+    //   'New Post',
+    //   'How to Show Notification in Flutter',
+    //   platformChannelSpecifics,
+    //   payload: 'Default_Sound',
+    // );
+    await flutterLocalNotificationsPlugin.zonedSchedule(
+      0,
+      'Pick A Colour',
+      'A New Day. A Fresh Mood. A New Colour.',
+      tz.TZDateTime.now(tz.local).add(const Duration(hours: 24)),
+      platformChannelSpecifics,
+      androidAllowWhileIdle: true,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+    );
+  }
 }

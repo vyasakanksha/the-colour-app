@@ -35,21 +35,28 @@ class FullColourWidgetState extends State<FullColourWidget> {
     _logger.d("$temp exripy time");
     final difference = widget.expiryTime.difference(DateTime.now());
     final int difference_hr = difference.inHours;
-    final int difference_min = difference.inMinutes;
+    final int difference_min = difference.inMinutes - (difference.inHours * 60);
     final int difference_sec =
         difference.inSeconds - (difference.inMinutes * 60);
     _logger.d("$difference_hr Mins: $difference_min Sec: $difference_sec");
     return TweenAnimationBuilder<Duration>(
-        duration: Duration(minutes: difference_min, seconds: difference_sec),
+        duration: Duration(
+            hours: difference.inHours,
+            minutes: difference_min,
+            seconds: difference_sec),
         tween: Tween(
-            begin: Duration(minutes: difference_min, seconds: difference_sec),
+            begin: Duration(
+                hours: difference.inHours,
+                minutes: difference_min,
+                seconds: difference_sec),
             end: Duration.zero),
         onEnd: () {
           widget._handleTimerExpired();
           widget.timerExpired();
         },
         builder: (BuildContext context, Duration value, Widget? child) {
-          final minutes = value.inMinutes;
+          final hours = value.inHours;
+          final minutes = value.inMinutes % 60;
           final seconds = value.inSeconds % 60;
           return Container(
               margin: const EdgeInsets.only(
@@ -67,7 +74,7 @@ class FullColourWidgetState extends State<FullColourWidget> {
                     Row(children: [
                       const SizedBox(width: 10),
                       Flexible(
-                          child: Text('$minutes:$seconds',
+                          child: Text('$hours:$minutes:$seconds',
                               style: GoogleFonts.lato(
                                   textStyle: const TextStyle(
                                 color: Colors.black,

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:my_app/data/models/droplet.dart';
 import 'package:my_app/data/models/location.dart';
 import 'package:my_app/data/models/selected_colour.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:my_app/data/models/timezone.dart';
+import 'package:my_app/data/models/device_details.dart';
+
 import 'package:logger/logger.dart';
 
 class DatabaseService {
@@ -21,6 +23,7 @@ class DatabaseService {
   }
 
   Future addColourData(Color colour, String uid) async {
+    _logger.d("add colour, $uid $colour");
     Colour col = Colour(colour: colour, timestamp: DateTime.now());
     return await dropletCollection
         .doc(uid)
@@ -29,11 +32,30 @@ class DatabaseService {
   }
 
   Future addLocationData(
-      bool permission, Map<String, dynamic> details, String uid) async {
+      bool permission, Map<String, dynamic> details, String? uid) async {
+    _logger.d("add locaton", uid);
     Location loc = Location(permission: permission, details: details);
     return await dropletCollection
         .doc(uid)
         .collection('location')
         .add(loc.toMap());
+  }
+
+  Future addTimeZoneData(String timezone, String? uid) async {
+    _logger.d("add timezone", uid);
+    TimeZone tz = TimeZone(timezone: timezone);
+    return await dropletCollection
+        .doc(uid)
+        .collection('timezone')
+        .add(tz.toMap());
+  }
+
+  Future addDeviceDetailsData(Map<String, dynamic> details, String? uid) async {
+    _logger.d("device details", uid);
+    DeviceDetails dd = DeviceDetails(details: details);
+    return await dropletCollection
+        .doc(uid)
+        .collection('device')
+        .add(dd.toMap());
   }
 }
