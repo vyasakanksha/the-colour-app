@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_app/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:logger/logger.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 // Consts
 import 'package:my_app/consts/colours.dart' as _colours;
@@ -22,10 +24,20 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await _configureLocalTimeZone();
 
   setupLocator();
 
+  // Pass all uncaught errors from the framework to Crashlytics.
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+
   runApp(ColourApp());
+}
+
+Future<void> _configureLocalTimeZone() async {
+  tz.initializeTimeZones();
+  final String currentTimeZone = await FlutterNativeTimezone.getLocalTimezone();
+  tz.setLocalLocation(tz.getLocation(currentTimeZone));
 }
 
 class ColourApp extends StatelessWidget {

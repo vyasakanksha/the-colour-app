@@ -71,6 +71,6 @@ class DefaultFirebaseOptions {
     storageBucket: 'the-colour-app.appspot.com',
     iosClientId:
         '66513038922-u3lrpquuasjjhgd8v9d4qjvbgjr1a6al.apps.googleusercontent.com',
-    iosBundleId: 'com.example.myApp',
+    iosBundleId: 'com.thecolourapp',
   );
 }
