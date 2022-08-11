@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:logger/logger.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_app/consts/strings.dart' as _strings;
+import 'package:my_app/screens/home/widgets/gallery.dart';
 
 class FullColourWidget extends StatefulWidget {
   final Color colour;
@@ -95,9 +96,31 @@ class FullColourWidgetState extends State<FullColourWidget> {
                             )),
                             textAlign: TextAlign.left,
                           ),
-                        )
+                        ),
                       ],
                     ),
+                    Row(
+                      children: [
+                        Flexible(
+                            child: TextButton.icon(
+                          icon: const Icon(
+                            Icons.arrow_forward,
+                            size: 30.0,
+                            color: Colors.white,
+                          ),
+                          label: const Text('To The Gallery',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30)),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Gallery()),
+                            );
+                          },
+                        ))
+                      ],
+                    )
                   ])));
         });
   }
