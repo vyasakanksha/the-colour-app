@@ -50,6 +50,7 @@ dependencies:
   flutter_native_timezone: ^2.0.0
   firebase_crashlytics: ^2.8.6
   device_info_plus: ^4.0.0
+  p5: ^0.1.0
 
 
 dev_dependencies:
@@ -83,9 +84,11 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/jes.png
+    - assets/images/srini.png
+    - assets/images/michal.png
+    - assets/images/ak.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
