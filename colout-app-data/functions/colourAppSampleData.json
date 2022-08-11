@@ -1,0 +1,1641 @@
+[{
+	"id": "0hqr5UT4YYNHksL7hF5h",
+	"timestamp": {
+		"_seconds": 1659474276,
+		"_nanoseconds": 400000000
+	},
+	"colours": {
+		"id": "GWsADTj5NDK7GWXrL7Vs",
+		"timestamp": {
+			"_seconds": 1659474280,
+			"_nanoseconds": 510000000
+		},
+		"colour": "#FF4B26"
+	},
+	"location": [{
+		"id": "MXNJT9t6anVxpD4TkAC1",
+		"permission": true,
+		"details": {
+			"is_mocked": false,
+			"altitude": 104.9000015258789,
+			"latitude": 51.0628389,
+			"speed_accuracy": 0,
+			"timestamp": 1659633648936,
+			"floor": null,
+			"heading": 0,
+			"speed": 0,
+			"accuracy": 13.581000328063965,
+			"longitude": -0.312128
+		}
+	}, {
+		"id": "PTxfwsIvSgBc8baLt8Mk",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "QDL1UgKhe5wWvpAgVGj3",
+		"permission": true,
+		"details": {
+			"timestamp": 1659633675474,
+			"speed": 0.0820869654417038,
+			"floor": null,
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"altitude": 104.80000305175781,
+			"heading": 185.9796142578125,
+			"longitude": -0.3121203,
+			"latitude": 51.0628316,
+			"accuracy": 13.803000450134277
+		}
+	}, {
+		"id": "bvWd5jdDaYlzu2O1cE8M",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "kf8oUoWTXRyyW94DTpEz",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "s0FHx1ZRVXpNqbfntA0l",
+		"permission": false,
+		"details": {}
+	}, {
+		"id": "sFN3nsL3fy88xxrImQ8B",
+		"permission": true,
+		"details": {
+			"speed_accuracy": 0,
+			"longitude": -0.3121234,
+			"heading": 90,
+			"accuracy": 12.970000267028809,
+			"speed": 0,
+			"latitude": 51.0628345,
+			"is_mocked": false,
+			"timestamp": 1659633889812,
+			"altitude": 104.80000305175781,
+			"floor": null
+		}
+	}],
+	"device": {
+		"id": "Wd0Y5pKkbm8VehRSrDLm",
+		"details": {
+			"host": "rd-build-72",
+			"bootloader": "unknown",
+			"display": "ONEPLUS A6010_41_211125",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"hardware": "qcom",
+			"fingerprint": "OnePlus/OnePlus6T/OnePlus6T:11/RKQ1.201217.002/2111252327:user/release-keys",
+			"systemFeatures": ["android.hardware.sensor.proximity", "oem.serial_cdev.support", "android.hardware.sensor.accelerometer", "android.software.controls", "android.hardware.faketouch", "oem.service.adb.tcp.port.support", "oem.dual.camera.calibration.enchilada", "android.hardware.usb.accessory", "oem.qcom.fastchager.support", "oem.dual.back.camera.support", "android.hardware.telephony.cdma", "android.software.backup", "oem.opcamera_manual_zsl.support", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.software.activities_on_secondary_displays", "oem.dcip3.support", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.hardware.audio.low_latency", "oem.lift_up_display.support", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "oem.background.control", "oem.otgSwitch.support", "android.hardware.opengles.aep", "oem.otg.positive.negative.plug.support", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "oem.breathLight.support", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.sip.voip", "android.hardware.se.omapi.ese", "oem.autobrightctl.animation.support", "oem.keyDefine.support", "oem.inexact.alarm", "oem.picture.color.mode.srgb", "oem.pdaf.not.support", "oem.dual.led.support", "android.hardware.usb.host", "android.hardware.audio.output", "android.software.verified_boot", "oem.display.adaptive.mode.support", "android.hardware.camera.flash", "android.hardware.camera.front", "oem.no_need_power_on_password.support", "android.hardware.screen.portrait", "android.hardware.nfc", "com.google.android.feature.TURBO_PRELOAD", "oem.hw.manufacturer.qualcomm", "oem.hapticsService.support", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "oem.dualsim.support", "com.oneplus.software.oos", "android.software.autofill", "oem.threeStageKey.support", "oem.gyroscope.support", "android.software.securely_removes_users", "oem.linear.motor.support", "android.hardware.bluetooth_le", "oem.prox.calibration.support", "android.hardware.sensor.compass", "com.oneplus.software.oos.11", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "oem.blackScreenGesture.support", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "android.hardware.screen.landscape", "android.software.device_id_attestation", "oem.new.dual.camera.calibration.support", "android.hardware.ram.normal", "oem.high.gain.mode.support", "android.software.managed_users", "com.oneplus.software.overseas", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "oem.op_intelligent_background_management.support", "oem.incall.notitle.support", "android.hardware.camera.any", "oem.op_legal_information.support", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "android.software.app_enumeration", "oem.threeScreenshot.support", "android.hardware.camera.level.full", "oem.secrecy.support", "oem.sar.sensor.support", "oem.product_info_dumpling.support", "android.hardware.wifi.direct", "android.software.live_wallpaper", "oem.vooc.fastchager.support", "oem.blackScreenGesture_2.support", "android.software.ipsec_tunnels", "oem.audiotuner.support", "oem.op_dark_mode.support", "oem.round.screen.support", "android.hardware.audio.pro", "oem.direct.support", "oem.new_led_color.support", "com.oneplus.software.oos.n_theme_ready", "android.hardware.nfc.hcef", "android.hardware.location.gps", "oem.hall.auto.test.support", "android.software.midi", "oem.timePoweroffWakeup.support", "android.hardware.nfc.any", "android.hardware.nfc.hce", "oem.ambient.support", "android.hardware.wifi", "android.hardware.location", "com.google.android.mainline.patchlevel.1", "android.hardware.vulkan.level", "oem.read_mode.support", "oem.otg.switch.support", "oem.finger.print.support", "oem.tty.support", "android.software.secure_lock_screen", "android.hardware.telephony", "android.software.file_based_encryption", null, "com.oneplus.mobilephone"],
+			"supported64BitAbis": ["arm64-v8a"],
+			"model": "ONEPLUS A6010",
+			"type": "user",
+			"version": {
+				"incremental": "2111252327",
+				"sdkInt": 30,
+				"release": "11",
+				"previewSdkInt": 0,
+				"securityPatch": "2021-11-01",
+				"baseOS": "",
+				"codename": "REL"
+			},
+			"id": "RKQ1.201217.002",
+			"device": "OnePlus6T",
+			"androidId": null,
+			"brand": "OnePlus",
+			"board": "sdm845",
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"product": "OnePlus6T",
+			"tags": "release-keys",
+			"manufacturer": "OnePlus",
+			"isPhysicalDevice": true
+		}
+	},
+	"timezone": {
+		"id": "9OpckJP8WeXsIs5fuWNY",
+		"timezone": "BST"
+	}
+}, {
+	"id": "3iK62QYHVznluMqBNw0k",
+	"timestamp": {
+		"_seconds": 1659620701,
+		"_nanoseconds": 382000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "6iU2GfPet1P6Ifl1IoSQ",
+		"details": {
+			"heading": 0,
+			"longitude": 72.8291063,
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"speed": 0,
+			"latitude": 19.0929716,
+			"altitude": -60.5,
+			"accuracy": 13.458999633789062,
+			"timestamp": 1659620698395,
+			"floor": null
+		},
+		"permission": true
+	}, {
+		"id": "Om3A6e60QV3v21IstCvD",
+		"details": {
+			"heading": 0,
+			"floor": null,
+			"accuracy": 13.458999633789062,
+			"is_mocked": false,
+			"longitude": 72.8291063,
+			"latitude": 19.0929716,
+			"speed_accuracy": 0,
+			"timestamp": 1659620698395,
+			"altitude": -60.5,
+			"speed": 0
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "5nYAjEpg24dr5wFDUXRX",
+	"timestamp": {
+		"_seconds": 1659361194,
+		"_nanoseconds": 20000000
+	},
+	"colours": {
+		"id": "dM2xbRrhwUKfmN0eZVds",
+		"timestamp": {
+			"_seconds": 1659883378,
+			"_nanoseconds": 843000000
+		},
+		"colour": "#F3ECBB"
+	},
+	"location": [{
+		"id": "1NLJ9Ux2sHvHYIMiBpWg",
+		"permission": true,
+		"details": {
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"timestamp": 1659620698395,
+			"accuracy": 13.458999633789062,
+			"heading": 0,
+			"speed": 0,
+			"latitude": 19.0929716,
+			"longitude": 72.8291063,
+			"floor": null,
+			"altitude": -60.5
+		}
+	}, {
+		"id": "3Szhf4KyVe3OOJ5XvNI0",
+		"permission": true,
+		"details": {
+			"heading": 0,
+			"accuracy": 47.92100143432617,
+			"speed_accuracy": 0,
+			"altitude": -62.29999542236328,
+			"is_mocked": false,
+			"latitude": 18.9968145,
+			"longitude": 72.8164028,
+			"floor": null,
+			"timestamp": 1659796088268,
+			"speed": 0
+		}
+	}, {
+		"id": "6cGOQ036gVU8u5zAH5OD",
+		"details": {
+			"speed": 0,
+			"altitude": -60.5,
+			"speed_accuracy": 0,
+			"accuracy": 20.899999618530273,
+			"latitude": 19.1468231,
+			"heading": 0,
+			"floor": null,
+			"longitude": 72.8234163,
+			"is_mocked": false,
+			"timestamp": 1659361196666
+		},
+		"permission": true
+	}, {
+		"id": "8WosPe537xt7BTVFDM4V",
+		"details": {
+			"speed": 0,
+			"timestamp": 1659361196666,
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"altitude": -60.5,
+			"floor": null,
+			"heading": 0,
+			"latitude": 19.1468231,
+			"accuracy": 20.899999618530273,
+			"longitude": 72.8234163
+		},
+		"permission": true
+	}, {
+		"id": "Ia1xfi5scx16DWWvTfK4",
+		"permission": true,
+		"details": {
+			"longitude": 72.8290732,
+			"speed_accuracy": 0,
+			"altitude": -60.5,
+			"timestamp": 1659383336407,
+			"floor": null,
+			"is_mocked": false,
+			"latitude": 19.0929315,
+			"accuracy": 13.821000099182129,
+			"heading": 0,
+			"speed": 0
+		}
+	}, {
+		"id": "Jr2mafsPFoaCw67YOdeL",
+		"permission": true,
+		"details": {
+			"speed": 0,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"altitude": -60.599998474121094,
+			"timestamp": 1659883375954,
+			"longitude": 72.8234219,
+			"accuracy": 14.321000099182129,
+			"floor": null,
+			"is_mocked": false,
+			"latitude": 19.146606
+		}
+	}, {
+		"id": "W7XrY347gI3t0haozCOm",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"speed": 0,
+			"longitude": 72.8291063,
+			"altitude": -60.5,
+			"timestamp": 1659620698395,
+			"is_mocked": false,
+			"latitude": 19.0929716,
+			"accuracy": 13.458999633789062,
+			"heading": 0,
+			"speed_accuracy": 0
+		}
+	}, {
+		"id": "XBAR0pz1em9mSb4UJkj0",
+		"details": {
+			"speed_accuracy": 0,
+			"accuracy": 14.663000106811523,
+			"floor": null,
+			"is_mocked": false,
+			"heading": 0,
+			"altitude": -60.5,
+			"timestamp": 1659361227185,
+			"speed": 0,
+			"latitude": 19.1468351,
+			"longitude": 72.8234054
+		},
+		"permission": true
+	}, {
+		"id": "aYZxcMG5SfbwlznLC7oT",
+		"permission": true,
+		"details": {
+			"timestamp": 1659883375954,
+			"is_mocked": false,
+			"speed_accuracy": 0,
+			"altitude": -60.599998474121094,
+			"longitude": 72.8234219,
+			"latitude": 19.146606,
+			"heading": 0,
+			"accuracy": 14.321000099182129,
+			"floor": null,
+			"speed": 0
+		}
+	}, {
+		"id": "cEGtIihUAJbNOMb40hCG",
+		"permission": true,
+		"details": {
+			"heading": 0,
+			"accuracy": 47.92100143432617,
+			"speed": 0,
+			"longitude": 72.8164028,
+			"timestamp": 1659796088268,
+			"latitude": 18.9968145,
+			"is_mocked": false,
+			"altitude": -62.29999542236328,
+			"speed_accuracy": 0,
+			"floor": null
+		}
+	}, {
+		"id": "crmbVvu6DgXTryXMJTso",
+		"permission": true,
+		"details": {
+			"is_mocked": false,
+			"floor": null,
+			"timestamp": 1659883375954,
+			"longitude": 72.8234219,
+			"accuracy": 14.321000099182129,
+			"speed": 0,
+			"altitude": -60.599998474121094,
+			"speed_accuracy": 0,
+			"heading": 0,
+			"latitude": 19.146606
+		}
+	}, {
+		"id": "kjq0EQ6HYpk9soI5o0fw",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"longitude": 72.8291063,
+			"accuracy": 13.458999633789062,
+			"speed": 0,
+			"is_mocked": false,
+			"altitude": -60.5,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"latitude": 19.0929716,
+			"timestamp": 1659620698395
+		}
+	}, {
+		"id": "oSklmafTjeoKnYgRl7vh",
+		"permission": true,
+		"details": {
+			"latitude": 19.1468231,
+			"floor": null,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"timestamp": 1659361196666,
+			"altitude": -60.5,
+			"accuracy": 20.899999618530273,
+			"speed": 0,
+			"longitude": 72.8234163,
+			"is_mocked": false
+		}
+	}, {
+		"id": "pYoEGnpHmZCCUIsoSME4",
+		"permission": true,
+		"details": {
+			"accuracy": 47.92100143432617,
+			"is_mocked": false,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"floor": null,
+			"altitude": -62.29999542236328,
+			"longitude": 72.8164028,
+			"speed": 0,
+			"timestamp": 1659796088268,
+			"latitude": 18.9968145
+		}
+	}, {
+		"id": "qTreMcLWx9RdRS0a3Xc8",
+		"permission": true,
+		"details": {
+			"is_mocked": false,
+			"floor": null,
+			"speed": 0,
+			"speed_accuracy": 0,
+			"latitude": 19.0929853,
+			"timestamp": 1659447610861,
+			"altitude": -60.5,
+			"heading": 90,
+			"longitude": 72.8290886,
+			"accuracy": 14.48799991607666
+		}
+	}, {
+		"id": "ussk3CuJrLEmnXwJcHCA",
+		"details": {
+			"floor": null,
+			"is_mocked": false,
+			"heading": 90,
+			"speed": 0,
+			"longitude": 72.8234163,
+			"altitude": -60.5,
+			"timestamp": 1659361202657,
+			"speed_accuracy": 0,
+			"latitude": 19.1468231,
+			"accuracy": 20.899999618530273
+		},
+		"permission": true
+	}],
+	"device": {
+		"id": "4drugQYbHSNNJO3mR639",
+		"details": {
+			"tags": "release-keys",
+			"device": "OP555BL1",
+			"systemFeatures": ["android.hardware.sensor.proximity", "oppo.screen.hovering.support", "oppo.multiapp.support", "oppo.user.delete.channel.support", "android.hardware.sensor.accelerometer", "android.software.controls", "oppo.aod.prevent.burn.support", "android.hardware.faketouch", "com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE", "oppo.ams.act.freqcontrol", "android.hardware.usb.accessory", "oppo.back.touch.fingerprint.sensor", "android.hardware.telephony.cdma", "android.software.backup", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "oppo.brightness.mode.automatic", "oppo.support.single.partition", "android.software.print", "oppo.high.brightness.support", "oppo.app2sd.disabled", "android.software.activities_on_secondary_displays", "android.software.voice_recognizers", "com.google.lens.feature.CAMERA_INTEGRATION", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "oppo.black.gesture.proximitysensor.support", "android.hardware.audio.low_latency", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "android.hardware.opengles.aep", "oppo.display.screen.90hz.support", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "oppo.performance.power.netwake", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.incremental_delivery", "oplus.multiuser.wfd.notsupport", "oplus.secrecy.support", "oppo.karaoke_v2.support", "android.hardware.usb.host", "oppo.hardware.fingerprint.optical.support", "android.hardware.audio.output", "oppo.display.screen.gloablehbm.support", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.se.omapi.uicc", "oppo.appautoresolution.support", "android.hardware.screen.portrait", "com.google.android.feature.DPS", "android.hardware.nfc", "com.oppo.feature.screen.heteromorphism", "com.nxp.mifare", "oppo.multiuser.wfd.notsupport", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "com.oneplus.software.oos", "android.software.autofill", "android.software.securely_removes_users", "oppo.aod.transparent", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "com.games.exp", "oplus.network.sar.earpiece.detect.support", "com.google.android.feature.ZERO_TOUCH", "android.hardware.screen.landscape", "oppo.hardware.face.support", "com.systemui.feature.single.tap.gesture.disable", "android.hardware.ram.normal", "oppo.feature.21851", "oppo.multibits.dimming.support", "android.software.managed_users", "com.oplus.software.overseas.afteroos113", "com.oneplus.software.overseas", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "com.google.lens.feature.IMAGE_INTEGRATION", "oppo.sensor.fusionlight.support", "android.hardware.camera.any", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "oppo.aod.support", "com.google.android.apps.dialer.call_recording_audio", "android.software.connectionservice", "com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "oppo.autobrightctl.animation.support", "android.hardware.camera.capability.manual_sensor", "android.software.app_enumeration", "oppo.display.screen.defaultsmartmode", "com.google.android.apps.dialer.SUPPORTED", "android.hardware.camera.level.full", "oppo.black.gesture.wake.up.arouse.support", "android.hardware.wifi.direct", "android.software.live_wallpaper", "oppo.autolight.psensor.notsupport", "oppo.wlan.privateDns.support", "com.mediatek.hardware.vow_dsp.riscv", "android.software.ipsec_tunnels", "oppo.incomingcall.voicecontrol.shield", "com.oneplus.software.oos.n_theme_ready", "android.hardware.nfc.hcef", "android.hardware.location.gps", "android.software.midi", "oppo.display.screen.underlightsensor.support", "com.mediatek.hardware.vow.2e2k", "oppo.karaoke_v2.pitchchange", "android.hardware.nfc.any", "android.hardware.nfc.hce", "com.oneplus.software.overseas.in", "android.hardware.wifi", "android.hardware.location", "com.google.android.mainline.patchlevel.1", "oplus.network.tempdds.support", "android.hardware.vulkan.level", "com.google.android.feature.PREMIER_TIER", "com.games.oneplus", "android.software.secure_lock_screen", "android.hardware.biometrics.face", "android.hardware.telephony", "android.software.file_based_encryption", null],
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"hardware": "mt6877",
+			"isPhysicalDevice": true,
+			"manufacturer": "OnePlus",
+			"brand": "OnePlus",
+			"androidId": null,
+			"bootloader": "unknown",
+			"type": "user",
+			"display": "IV2201_11_A.13",
+			"supported64BitAbis": ["arm64-v8a"],
+			"host": "ubuntu-9-143",
+			"product": "IV2201_IND",
+			"version": {
+				"release": "11",
+				"securityPatch": "2022-06-05",
+				"previewSdkInt": 0,
+				"codename": "REL",
+				"baseOS": "",
+				"incremental": "1655212189936",
+				"sdkInt": 30
+			},
+			"model": "IV2201",
+			"board": "oplus6877",
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"id": "RP1A.200720.011",
+			"fingerprint": "OnePlus/IV2201_IND/OP555BL1:11/RP1A.200720.011/1655212189936:user/release-keys"
+		}
+	},
+	"timezone": {
+		"id": "2CUuu9npn1WZxqbnpDWB",
+		"timezone": "IST"
+	}
+}, {
+	"id": "5vFZtN0D8Rxh9VSTVoFx",
+	"timestamp": {
+		"_seconds": 1659644462,
+		"_nanoseconds": 815000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "F9dDI53SkhKGyZswwHI0",
+		"permission": true,
+		"details": {
+			"timestamp": 1659644463895,
+			"heading": 0,
+			"is_mocked": false,
+			"altitude": -1.3000000715255737,
+			"accuracy": 13.239999771118164,
+			"speed": 0,
+			"speed_accuracy": 0,
+			"longitude": -121.8778819,
+			"latitude": 37.3713036,
+			"floor": null
+		}
+	}, {
+		"id": "OPEOETUa3QAiRSYkBDk9",
+		"details": {
+			"latitude": 37.3713036,
+			"longitude": -121.8778819,
+			"timestamp": 1659644463895,
+			"altitude": -1.3000000715255737,
+			"accuracy": 13.239999771118164,
+			"is_mocked": false,
+			"speed": 0,
+			"speed_accuracy": 0,
+			"floor": null,
+			"heading": 0
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "9HwBFukKA0qQw00aIHTR",
+	"timestamp": {
+		"_seconds": 1659707819,
+		"_nanoseconds": 626000000
+	},
+	"colours": {
+		"id": "Memk0ylvxWN4O25qkzA2",
+		"timestamp": {
+			"_seconds": 1659707825,
+			"_nanoseconds": 595000000
+		},
+		"colour": "#8BCFD7"
+	},
+	"location": [{
+		"id": "4WJIM48IXpZuu7PI1ru4",
+		"permission": true,
+		"details": {
+			"is_mocked": false,
+			"speed_accuracy": 0,
+			"accuracy": 13.848999977111816,
+			"altitude": -60.5,
+			"heading": 0,
+			"latitude": 19.0929621,
+			"timestamp": 1659707820060,
+			"longitude": 72.8290991,
+			"floor": null,
+			"speed": 0
+		}
+	}, {
+		"id": "5NRmQI1MCBOH7B6pL3gY",
+		"permission": true,
+		"details": {
+			"speed": 0,
+			"speed_accuracy": 0,
+			"timestamp": 1659707820060,
+			"altitude": -60.5,
+			"longitude": 72.8290991,
+			"is_mocked": false,
+			"accuracy": 13.848999977111816,
+			"heading": 0,
+			"floor": null,
+			"latitude": 19.0929621
+		}
+	}, {
+		"id": "yXIQmwKG3PZbcBo99JR4",
+		"details": {
+			"timestamp": 1659707820060,
+			"longitude": 72.8290991,
+			"floor": null,
+			"latitude": 19.0929621,
+			"speed": 0,
+			"altitude": -60.5,
+			"heading": 0,
+			"accuracy": 13.848999977111816,
+			"speed_accuracy": 0,
+			"is_mocked": false
+		},
+		"permission": true
+	}],
+	"device": {
+		"id": "a4xuMWmIRgzVVUrbzPmp",
+		"details": {
+			"supported64BitAbis": ["arm64-v8a"],
+			"type": "user",
+			"fingerprint": "OnePlus/IV2201_IND/OP555BL1:11/RP1A.200720.011/1655212189936:user/release-keys",
+			"isPhysicalDevice": true,
+			"androidId": null,
+			"product": "IV2201_IND",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"brand": "OnePlus",
+			"model": "IV2201",
+			"device": "OP555BL1",
+			"manufacturer": "OnePlus",
+			"tags": "release-keys",
+			"hardware": "mt6877",
+			"host": "ubuntu-9-143",
+			"bootloader": "unknown",
+			"board": "oplus6877",
+			"display": "IV2201_11_A.13",
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"systemFeatures": ["android.hardware.sensor.proximity", "oppo.screen.hovering.support", "oppo.multiapp.support", "oppo.user.delete.channel.support", "android.hardware.sensor.accelerometer", "android.software.controls", "oppo.aod.prevent.burn.support", "android.hardware.faketouch", "com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE", "oppo.ams.act.freqcontrol", "android.hardware.usb.accessory", "oppo.back.touch.fingerprint.sensor", "android.hardware.telephony.cdma", "android.software.backup", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "oppo.brightness.mode.automatic", "oppo.support.single.partition", "android.software.print", "oppo.high.brightness.support", "oppo.app2sd.disabled", "android.software.activities_on_secondary_displays", "android.software.voice_recognizers", "com.google.lens.feature.CAMERA_INTEGRATION", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "oppo.black.gesture.proximitysensor.support", "android.hardware.audio.low_latency", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "android.hardware.opengles.aep", "oppo.display.screen.90hz.support", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "oppo.performance.power.netwake", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.incremental_delivery", "oplus.multiuser.wfd.notsupport", "oplus.secrecy.support", "oppo.karaoke_v2.support", "android.hardware.usb.host", "oppo.hardware.fingerprint.optical.support", "android.hardware.audio.output", "oppo.display.screen.gloablehbm.support", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.se.omapi.uicc", "oppo.appautoresolution.support", "android.hardware.screen.portrait", "com.google.android.feature.DPS", "android.hardware.nfc", "com.oppo.feature.screen.heteromorphism", "com.nxp.mifare", "oppo.multiuser.wfd.notsupport", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "com.oneplus.software.oos", "android.software.autofill", "android.software.securely_removes_users", "oppo.aod.transparent", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "com.games.exp", "oplus.network.sar.earpiece.detect.support", "com.google.android.feature.ZERO_TOUCH", "android.hardware.screen.landscape", "oppo.hardware.face.support", "com.systemui.feature.single.tap.gesture.disable", "android.hardware.ram.normal", "oppo.feature.21851", "oppo.multibits.dimming.support", "android.software.managed_users", "com.oplus.software.overseas.afteroos113", "com.oneplus.software.overseas", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "com.google.lens.feature.IMAGE_INTEGRATION", "oppo.sensor.fusionlight.support", "android.hardware.camera.any", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "oppo.aod.support", "com.google.android.apps.dialer.call_recording_audio", "android.software.connectionservice", "com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "oppo.autobrightctl.animation.support", "android.hardware.camera.capability.manual_sensor", "android.software.app_enumeration", "oppo.display.screen.defaultsmartmode", "com.google.android.apps.dialer.SUPPORTED", "android.hardware.camera.level.full", "oppo.black.gesture.wake.up.arouse.support", "android.hardware.wifi.direct", "android.software.live_wallpaper", "oppo.autolight.psensor.notsupport", "oppo.wlan.privateDns.support", "com.mediatek.hardware.vow_dsp.riscv", "android.software.ipsec_tunnels", "oppo.incomingcall.voicecontrol.shield", "com.oneplus.software.oos.n_theme_ready", "android.hardware.nfc.hcef", "android.hardware.location.gps", "android.software.midi", "oppo.display.screen.underlightsensor.support", "com.mediatek.hardware.vow.2e2k", "oppo.karaoke_v2.pitchchange", "android.hardware.nfc.any", "android.hardware.nfc.hce", "com.oneplus.software.overseas.in", "android.hardware.wifi", "android.hardware.location", "com.google.android.mainline.patchlevel.1", "oplus.network.tempdds.support", "android.hardware.vulkan.level", "com.google.android.feature.PREMIER_TIER", "com.games.oneplus", "android.software.secure_lock_screen", "android.hardware.biometrics.face", "android.hardware.telephony", "android.software.file_based_encryption", null],
+			"id": "RP1A.200720.011",
+			"version": {
+				"release": "11",
+				"securityPatch": "2022-06-05",
+				"sdkInt": 30,
+				"previewSdkInt": 0,
+				"incremental": "1655212189936",
+				"baseOS": "",
+				"codename": "REL"
+			}
+		}
+	},
+	"timezone": {
+		"id": "FeqWnV6KNhSRIi683rxQ",
+		"timezone": "IST"
+	}
+}, {
+	"id": "9f4f4Ry0WjwobKOXtThB",
+	"timestamp": {
+		"_seconds": 1659467462,
+		"_nanoseconds": 649000000
+	},
+	"colours": {
+		"id": "BDE8gHXgJCWwWCPmoPva",
+		"colour": "#8BCFD7",
+		"timestamp": {
+			"_seconds": 1659467471,
+			"_nanoseconds": 541000000
+		}
+	},
+	"location": [{
+		"id": "1bL9i9gUZnTpMHTTFJSd",
+		"permission": true,
+		"details": {
+			"latitude": 59.3495558,
+			"speed": 0,
+			"longitude": 18.0044111,
+			"heading": 0,
+			"altitude": 53.400001525878906,
+			"is_mocked": false,
+			"accuracy": 19.833999633789062,
+			"floor": null,
+			"speed_accuracy": 0,
+			"timestamp": 1659467479603
+		}
+	}, {
+		"id": "9n9ilBalJtsHO4SlVTdT",
+		"permission": true,
+		"details": {
+			"accuracy": 30.97800064086914,
+			"latitude": 59.3496295,
+			"altitude": 53.400001525878906,
+			"longitude": 18.0043903,
+			"timestamp": 1659467456684,
+			"floor": null,
+			"is_mocked": false,
+			"speed": 0,
+			"heading": 0,
+			"speed_accuracy": 0
+		}
+	}, {
+		"id": "E1Ko4fP7vEvYRAJgjEZr",
+		"permission": true,
+		"details": {
+			"accuracy": 30.97800064086914,
+			"latitude": 59.3496295,
+			"longitude": 18.0043903,
+			"timestamp": 1659467456684,
+			"speed": 0,
+			"speed_accuracy": 0,
+			"floor": null,
+			"altitude": 53.400001525878906,
+			"is_mocked": false,
+			"heading": 0
+		}
+	}, {
+		"id": "htyDyqDlY1nSvjFmhuOC",
+		"permission": true,
+		"details": {
+			"timestamp": 1659467500710,
+			"accuracy": 18.722000122070312,
+			"floor": null,
+			"longitude": 18.0044232,
+			"speed": 0,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"altitude": 53.400001525878906,
+			"is_mocked": false,
+			"latitude": 59.3495734
+		}
+	}, {
+		"id": "o7jW8DpLi7kquPk1vJAm",
+		"permission": true,
+		"details": {
+			"timestamp": 1659467456684,
+			"accuracy": 30.97800064086914,
+			"longitude": 18.0043903,
+			"speed": 0,
+			"altitude": 53.400001525878906,
+			"floor": null,
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"heading": 0,
+			"latitude": 59.3496295
+		}
+	}],
+	"device": {
+		"id": "V2ENtg50B5vbRe5wf403",
+		"details": {
+			"id": "QP1A.191005.007.A3",
+			"androidId": null,
+			"brand": "google",
+			"fingerprint": "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys",
+			"manufacturer": "Google",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"device": "marlin",
+			"isPhysicalDevice": true,
+			"product": "marlin",
+			"hardware": "marlin",
+			"display": "QP1A.191005.007.A3",
+			"version": {
+				"previewSdkInt": 0,
+				"securityPatch": "2019-10-06",
+				"incremental": "5972272",
+				"codename": "REL",
+				"release": "10",
+				"baseOS": "",
+				"sdkInt": 29
+			},
+			"systemFeatures": ["android.hardware.sensor.proximity", "com.verizon.hardware.telephony.lte", "com.verizon.hardware.telephony.ehrpd", "android.hardware.sensor.accelerometer", "android.hardware.faketouch", "android.hardware.usb.accessory", "android.hardware.telephony.cdma", "android.software.backup", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.software.activities_on_secondary_displays", "android.hardware.wifi.rtt", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.hardware.audio.low_latency", "android.software.cant_save_state", "android.hardware.opengles.aep", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "com.google.android.feature.GOOGLE_BUILD", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.sip.voip", "android.hardware.vr.high_performance", "com.google.android.apps.photos.NEXUS_PRELOAD", "android.hardware.usb.host", "android.hardware.audio.output", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.sensor.hifi_sensors", "android.hardware.screen.portrait", "android.hardware.nfc", "com.google.android.feature.TURBO_PRELOAD", "android.hardware.vr.headtracking", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "android.software.autofill", "android.software.securely_removes_users", "android.software.vr.mode", "com.google.android.feature.PIXEL_EXPERIENCE", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.hardware.sensor.barometer", "android.software.app_widgets", "android.hardware.telephony.carrierlock", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "com.google.android.feature.ZERO_TOUCH", "android.hardware.screen.landscape", "android.hardware.ram.normal", "com.google.android.apps.photos.nexus_preload", "android.software.managed_users", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "android.hardware.camera.any", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "com.google.android.apps.dialer.SUPPORTED", "android.hardware.camera.level.full", "android.hardware.wifi.direct", "android.software.live_wallpaper", "com.google.android.feature.GOOGLE_EXPERIENCE", "com.google.android.feature.EXCHANGE_6_2", "android.hardware.audio.pro", "android.hardware.nfc.hcef", "android.hardware.location.gps", "android.software.midi", "android.hardware.nfc.any", "android.hardware.nfc.hce", "android.hardware.wifi", "android.hardware.location", "android.hardware.vulkan.level", "android.software.secure_lock_screen", "android.hardware.telephony", "android.software.file_based_encryption", null],
+			"tags": "release-keys",
+			"board": "marlin",
+			"bootloader": "8996-012001-1908071822",
+			"model": "Pixel XL",
+			"supported64BitAbis": ["arm64-v8a"],
+			"type": "user",
+			"host": "abfarm830"
+		}
+	},
+	"timezone": {
+		"id": "FGP1FKz6xgRYkyyce4lZ",
+		"timezone": "CEST"
+	}
+}, {
+	"id": "PISZycfDLAlDwV31ABid",
+	"timestamp": {
+		"_seconds": 1659796090,
+		"_nanoseconds": 910000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "CLv1qCV1GIfufbAwWtre",
+		"details": {
+			"accuracy": 47.92100143432617,
+			"heading": 0,
+			"floor": null,
+			"longitude": 72.8164028,
+			"is_mocked": false,
+			"altitude": -62.29999542236328,
+			"timestamp": 1659796088268,
+			"speed": 0,
+			"latitude": 18.9968145,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}, {
+		"id": "qc8UgcijQpb4i1MfujmI",
+		"details": {
+			"longitude": 72.8164028,
+			"floor": null,
+			"heading": 0,
+			"speed": 0,
+			"altitude": -62.29999542236328,
+			"latitude": 18.9968145,
+			"timestamp": 1659796088268,
+			"accuracy": 47.92100143432617,
+			"is_mocked": false,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "Ss3jCp97ABm4tHsKpmSr",
+	"timestamp": {
+		"_seconds": 1659447610,
+		"_nanoseconds": 428000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "TMuJwwV9q1P4eSpYxDr9",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"heading": 90,
+			"latitude": 19.0929853,
+			"is_mocked": false,
+			"accuracy": 14.48799991607666,
+			"timestamp": 1659447610861,
+			"longitude": 72.8290886,
+			"speed": 0,
+			"altitude": -60.5,
+			"speed_accuracy": 0
+		}
+	}, {
+		"id": "Wm8avmQz2jpzGFLzOCSk",
+		"details": {
+			"is_mocked": false,
+			"longitude": 72.8290886,
+			"latitude": 19.0929853,
+			"floor": null,
+			"speed_accuracy": 0,
+			"altitude": -60.5,
+			"accuracy": 14.48799991607666,
+			"speed": 0,
+			"heading": 90,
+			"timestamp": 1659447610861
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "dkSSDnq5J9DOlnX3ofuS",
+	"timestamp": {
+		"_seconds": 1659460444,
+		"_nanoseconds": 181000000
+	},
+	"colours": {
+		"id": "YVO7Jyds1eOnJzaGArQU",
+		"colour": "#FF4B26",
+		"timestamp": {
+			"_seconds": 1659746209,
+			"_nanoseconds": 598000000
+		}
+	},
+	"location": [{
+		"id": "0VhHAYypqFS7oXqxJTmu",
+		"details": {
+			"longitude": -121.8778906,
+			"floor": null,
+			"altitude": -1.3000000715255737,
+			"is_mocked": false,
+			"latitude": 37.3713063,
+			"speed_accuracy": 0,
+			"speed": 0,
+			"heading": 0,
+			"timestamp": 1659460448358,
+			"accuracy": 13.005999565124512
+		},
+		"permission": true
+	}, {
+		"id": "827ec2BDWi2PHhTJv2H5",
+		"permission": true,
+		"details": {
+			"speed_accuracy": 0,
+			"longitude": -121.8778863,
+			"floor": null,
+			"latitude": 37.3713034,
+			"speed": 0.08930027484893799,
+			"altitude": -1.3000000715255737,
+			"accuracy": 12.694000244140625,
+			"is_mocked": false,
+			"heading": 266.8685302734375,
+			"timestamp": 1659644483250
+		}
+	}, {
+		"id": "9cw22xGI2nTwB0vJw4VU",
+		"details": {
+			"floor": null,
+			"heading": 0,
+			"timestamp": 1659746206528,
+			"is_mocked": false,
+			"speed": 0,
+			"altitude": -1.3000000715255737,
+			"longitude": -121.8778893,
+			"latitude": 37.3713074,
+			"accuracy": 13.380999565124512,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}, {
+		"id": "B1g0nFUKs8cMPHCSDG06",
+		"details": {
+			"heading": 0,
+			"latitude": 37.3713063,
+			"is_mocked": false,
+			"timestamp": 1659460448358,
+			"floor": null,
+			"longitude": -121.8778906,
+			"accuracy": 13.005999565124512,
+			"altitude": -1.3000000715255737,
+			"speed": 0,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}, {
+		"id": "B8hsNBW1iUXw1EYCNVoe",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"heading": 0,
+			"speed": 0,
+			"altitude": -1.3000000715255737,
+			"is_mocked": false,
+			"latitude": 37.3713131,
+			"speed_accuracy": 0,
+			"accuracy": 13.390000343322754,
+			"longitude": -121.8778779,
+			"timestamp": 1659547376850
+		}
+	}, {
+		"id": "DZCpl9OxkuCQgxDvnrF6",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"heading": 0,
+			"speed": 0,
+			"altitude": -1.3000000715255737,
+			"longitude": -121.8778779,
+			"speed_accuracy": 0,
+			"timestamp": 1659547376850,
+			"is_mocked": false,
+			"latitude": 37.3713131,
+			"accuracy": 13.390000343322754
+		}
+	}, {
+		"id": "Gq5ttNSYwH29KuC9n6p1",
+		"permission": true,
+		"details": {
+			"speed": 0,
+			"floor": null,
+			"speed_accuracy": 0,
+			"altitude": -1.3000000715255737,
+			"longitude": -121.8778819,
+			"latitude": 37.3713036,
+			"timestamp": 1659644463895,
+			"is_mocked": false,
+			"heading": 0,
+			"accuracy": 13.239999771118164
+		}
+	}, {
+		"id": "QzoxQOaG4a7gjmIJcgMX",
+		"permission": true,
+		"details": {
+			"latitude": 37.3713131,
+			"speed": 0,
+			"floor": null,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"accuracy": 13.390000343322754,
+			"altitude": -1.3000000715255737,
+			"timestamp": 1659547376850,
+			"is_mocked": false,
+			"longitude": -121.8778779
+		}
+	}, {
+		"id": "Vv0yiMKPfwUf8kalh9FW",
+		"permission": true,
+		"details": {
+			"timestamp": 1659746206528,
+			"altitude": -1.3000000715255737,
+			"longitude": -121.8778893,
+			"floor": null,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"accuracy": 13.380999565124512,
+			"speed": 0,
+			"latitude": 37.3713074,
+			"is_mocked": false
+		}
+	}, {
+		"id": "hNYN8lGagHrMEeuXOlrR",
+		"permission": true,
+		"details": {
+			"speed": 0,
+			"is_mocked": false,
+			"altitude": -1.3000000715255737,
+			"latitude": 37.3713063,
+			"accuracy": 13.005999565124512,
+			"speed_accuracy": 0,
+			"heading": 0,
+			"longitude": -121.8778906,
+			"timestamp": 1659460448358,
+			"floor": null
+		}
+	}, {
+		"id": "mgf2EfIV2Td4heg5iF3L",
+		"permission": true,
+		"details": {
+			"altitude": -1.3000000715255737,
+			"speed_accuracy": 0,
+			"speed": 0,
+			"is_mocked": false,
+			"floor": null,
+			"accuracy": 13.380999565124512,
+			"latitude": 37.3713074,
+			"longitude": -121.8778893,
+			"timestamp": 1659746206528,
+			"heading": 0
+		}
+	}, {
+		"id": "qYB1djNh0kh14MnYcMNK",
+		"details": {
+			"latitude": 37.3713036,
+			"longitude": -121.8778819,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"floor": null,
+			"speed": 0,
+			"altitude": -1.3000000715255737,
+			"is_mocked": false,
+			"timestamp": 1659644463895,
+			"accuracy": 13.239999771118164
+		},
+		"permission": true
+	}, {
+		"id": "uo7ZMVI8Ifp98Ig3IdkD",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"speed": 0,
+			"altitude": -1.3000000715255737,
+			"accuracy": 13.239999771118164,
+			"latitude": 37.3713036,
+			"longitude": -121.8778819,
+			"timestamp": 1659644463895,
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"heading": 0
+		}
+	}],
+	"device": {
+		"id": "KAmuhamGHCBrRY7i6WN9",
+		"details": {
+			"brand": "motorola",
+			"product": "ali",
+			"manufacturer": "motorola",
+			"id": "PPS29.118-15-11-16",
+			"display": "PPS29.118-15-11-16",
+			"board": "msm8953",
+			"androidId": null,
+			"fingerprint": "motorola/ali/ali:9/PPS29.118-15-11-16/3afd9:user/release-keys",
+			"host": "ilclbld171",
+			"supportedAbis": ["armeabi-v7a", "armeabi"],
+			"device": "ali",
+			"supported64BitAbis": [],
+			"bootloader": "0xC111",
+			"tags": "release-keys",
+			"version": {
+				"incremental": "3afd9",
+				"sdkInt": 28,
+				"codename": "REL",
+				"previewSdkInt": 0,
+				"release": "9",
+				"baseOS": "",
+				"securityPatch": "2020-04-01"
+			},
+			"model": "moto g(6)",
+			"isPhysicalDevice": true,
+			"type": "user",
+			"hardware": "qcom",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"systemFeatures": ["android.hardware.sensor.proximity", "com.motorola.motokey.mkprovider", "com.motorola.timezonedata.SUPPORTED", "android.software.adoptable_storage", "android.hardware.sensor.accelerometer", "android.hardware.faketouch", "com.motorola.software.product.ali_retail", "android.hardware.usb.accessory", "android.hardware.telephony.cdma", "android.software.backup", "com.motorola.software.fmradioservice", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.hardware.ethernet", "android.software.activities_on_secondary_displays", "com.motorola.software.x_line", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.software.cant_save_state", "com.motorola.camera2", "android.hardware.opengles.aep", "com.motorola.motodisplay.6.0", "com.motorola.faceunlock", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "com.motorola.launcher3.gridcustomization", "android.hardware.telephony.gsm", "com.motorola.software.guideme", "android.software.sip.voip", "com.motorola.photoeditor", "android.hardware.usb.host", "com.motorola.motokey", "android.hardware.audio.output", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.screen.portrait", "com.motorola.motodisplay.doze.glimpse", "com.dolby.dax2appUI", "com.google.android.feature.TURBO_PRELOAD", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "android.software.autofill", "com.motorola.software.device.ali", "com.google.preload_photos", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.motorola.software.mya", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "com.google.android.feature.ZERO_TOUCH", "android.hardware.screen.landscape", "android.hardware.ram.normal", "com.motorola.hardware.tier.G", "android.software.managed_users", "com.motorola.help", "com.motorola.moto", "com.motorola.hardware.wave.2018.1", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "android.hardware.camera.any", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "com.google.android.apps.dialer.SUPPORTED", "android.hardware.camera.level.full", "com.motorola.msimsettings", "com.motorola.arselfie", "android.hardware.wifi.direct", "android.software.live_wallpaper", "com.motorola.launcher3.twoline", "com.motorola.launcher3", "com.motorola.aov.bt_sco_v1", "com.motorola.actions", "com.motorola.aov.dsp_v4", "android.hardware.location.gps", "android.software.midi", "com.motorola.aov.ap_v4", "com.motorola.easyprefix", "android.hardware.wifi", "android.hardware.location", "android.hardware.vulkan.level", "com.uros.software.goodspeed", "com.motorola.motokey.fpsfallback", "android.hardware.telephony", null]
+		}
+	},
+	"timezone": {
+		"id": "8mxP3iwRgLP4kWypUV7Y",
+		"timezone": "PDT"
+	}
+}, {
+	"id": "enalUDp9f1hKL3lbRiRA",
+	"timestamp": {
+		"_seconds": 1659883377,
+		"_nanoseconds": 993000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "7CUFYOeWYgRiPxcKu7aE",
+		"details": {
+			"is_mocked": false,
+			"floor": null,
+			"altitude": -60.599998474121094,
+			"latitude": 19.146606,
+			"accuracy": 14.321000099182129,
+			"longitude": 72.8234219,
+			"heading": 0,
+			"speed": 0,
+			"timestamp": 1659883375954,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}, {
+		"id": "qE0JmyaS6WSO6C4Whes6",
+		"details": {
+			"accuracy": 14.321000099182129,
+			"heading": 0,
+			"longitude": 72.8234219,
+			"is_mocked": false,
+			"floor": null,
+			"speed": 0,
+			"speed_accuracy": 0,
+			"timestamp": 1659883375954,
+			"latitude": 19.146606,
+			"altitude": -60.599998474121094
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "eyMPKmfiBEaSwnOUTlLr",
+	"timestamp": {
+		"_seconds": 1659715633,
+		"_nanoseconds": 435000000
+	},
+	"colours": {
+		"id": "JGzm31uKB3XVEvUBb4Pn",
+		"timestamp": {
+			"_seconds": 1659715636,
+			"_nanoseconds": 331000000
+		},
+		"colour": "#8BCFD7"
+	},
+	"location": [{
+		"id": "Rbb7UT06ebQtWWcI7xw2",
+		"details": {
+			"is_mocked": false,
+			"altitude": 78.30000305175781,
+			"latitude": 51.5555963,
+			"accuracy": 13.491000175476074,
+			"speed_accuracy": 0,
+			"floor": null,
+			"heading": 0,
+			"longitude": -0.1220742,
+			"timestamp": 1659715633569,
+			"speed": 0
+		},
+		"permission": true
+	}, {
+		"id": "smGOE5VM1qF5lPe6Kfqa",
+		"permission": true,
+		"details": {
+			"longitude": -0.1220742,
+			"is_mocked": false,
+			"altitude": 78.30000305175781,
+			"latitude": 51.5555963,
+			"speed_accuracy": 0,
+			"speed": 0,
+			"floor": null,
+			"accuracy": 13.491000175476074,
+			"timestamp": 1659715633569,
+			"heading": 0
+		}
+	}, {
+		"id": "spdv7yvmEF74RvBN0dTI",
+		"permission": true,
+		"details": {
+			"latitude": 51.5555963,
+			"accuracy": 13.491000175476074,
+			"altitude": 78.30000305175781,
+			"speed_accuracy": 0,
+			"timestamp": 1659715633569,
+			"speed": 0,
+			"longitude": -0.1220742,
+			"floor": null,
+			"heading": 0,
+			"is_mocked": false
+		}
+	}],
+	"device": {
+		"id": "q54Gy4eVfgtxX4cxaytR",
+		"details": {
+			"hardware": "qcom",
+			"id": "RKQ1.201217.002",
+			"androidId": null,
+			"product": "OnePlus6T",
+			"brand": "OnePlus",
+			"bootloader": "unknown",
+			"version": {
+				"release": "11",
+				"securityPatch": "2021-11-01",
+				"incremental": "2111252327",
+				"baseOS": "",
+				"sdkInt": 30,
+				"codename": "REL",
+				"previewSdkInt": 0
+			},
+			"isPhysicalDevice": true,
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"type": "user",
+			"host": "rd-build-72",
+			"systemFeatures": ["android.hardware.sensor.proximity", "oem.serial_cdev.support", "android.hardware.sensor.accelerometer", "android.software.controls", "android.hardware.faketouch", "oem.service.adb.tcp.port.support", "oem.dual.camera.calibration.enchilada", "android.hardware.usb.accessory", "oem.qcom.fastchager.support", "oem.dual.back.camera.support", "android.hardware.telephony.cdma", "android.software.backup", "oem.opcamera_manual_zsl.support", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.software.activities_on_secondary_displays", "oem.dcip3.support", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.hardware.audio.low_latency", "oem.lift_up_display.support", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "oem.background.control", "oem.otgSwitch.support", "android.hardware.opengles.aep", "oem.otg.positive.negative.plug.support", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "oem.breathLight.support", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.sip.voip", "android.hardware.se.omapi.ese", "oem.autobrightctl.animation.support", "oem.keyDefine.support", "oem.inexact.alarm", "oem.picture.color.mode.srgb", "oem.pdaf.not.support", "oem.dual.led.support", "android.hardware.usb.host", "android.hardware.audio.output", "android.software.verified_boot", "oem.display.adaptive.mode.support", "android.hardware.camera.flash", "android.hardware.camera.front", "oem.no_need_power_on_password.support", "android.hardware.screen.portrait", "android.hardware.nfc", "com.google.android.feature.TURBO_PRELOAD", "oem.hw.manufacturer.qualcomm", "oem.hapticsService.support", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "oem.dualsim.support", "com.oneplus.software.oos", "android.software.autofill", "oem.threeStageKey.support", "oem.gyroscope.support", "android.software.securely_removes_users", "oem.linear.motor.support", "android.hardware.bluetooth_le", "oem.prox.calibration.support", "android.hardware.sensor.compass", "com.oneplus.software.oos.11", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "oem.blackScreenGesture.support", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "android.hardware.screen.landscape", "android.software.device_id_attestation", "oem.new.dual.camera.calibration.support", "android.hardware.ram.normal", "oem.high.gain.mode.support", "android.software.managed_users", "com.oneplus.software.overseas", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "oem.op_intelligent_background_management.support", "oem.incall.notitle.support", "android.hardware.camera.any", "oem.op_legal_information.support", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "android.software.app_enumeration", "oem.threeScreenshot.support", "android.hardware.camera.level.full", "oem.secrecy.support", "oem.sar.sensor.support", "oem.product_info_dumpling.support", "android.hardware.wifi.direct", "android.software.live_wallpaper", "oem.vooc.fastchager.support", "oem.blackScreenGesture_2.support", "android.software.ipsec_tunnels", "oem.audiotuner.support", "oem.op_dark_mode.support", "oem.round.screen.support", "android.hardware.audio.pro", "oem.direct.support", "oem.new_led_color.support", "com.oneplus.software.oos.n_theme_ready", "android.hardware.nfc.hcef", "android.hardware.location.gps", "oem.hall.auto.test.support", "android.software.midi", "oem.timePoweroffWakeup.support", "android.hardware.nfc.any", "android.hardware.nfc.hce", "oem.ambient.support", "android.hardware.wifi", "android.hardware.location", "com.google.android.mainline.patchlevel.1", "android.hardware.vulkan.level", "oem.read_mode.support", "oem.otg.switch.support", "oem.finger.print.support", "oem.tty.support", "android.software.secure_lock_screen", "android.hardware.telephony", "android.software.file_based_encryption", null, "com.oneplus.mobilephone"],
+			"tags": "release-keys",
+			"fingerprint": "OnePlus/OnePlus6T/OnePlus6T:11/RKQ1.201217.002/2111252327:user/release-keys",
+			"device": "OnePlus6T",
+			"manufacturer": "OnePlus",
+			"supported64BitAbis": ["arm64-v8a"],
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"model": "ONEPLUS A6010",
+			"display": "ONEPLUS A6010_41_211125",
+			"board": "sdm845"
+		}
+	},
+	"timezone": {
+		"id": "nO4BpKbGryCyXvgyWjH9",
+		"timezone": "BST"
+	}
+}, {
+	"id": "fr0kz8VlTwTC88ddzsxt",
+	"timestamp": {
+		"_seconds": 1659547375,
+		"_nanoseconds": 112000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "RQFtk9chvNdcFaczDs44",
+		"details": {
+			"heading": 0,
+			"latitude": 37.3713131,
+			"is_mocked": false,
+			"floor": null,
+			"longitude": -121.8778779,
+			"speed": 0,
+			"accuracy": 13.390000343322754,
+			"speed_accuracy": 0,
+			"altitude": -1.3000000715255737,
+			"timestamp": 1659547376850
+		},
+		"permission": true
+	}, {
+		"id": "TyFQ8A9vnXAqg70YTulX",
+		"permission": true,
+		"details": {
+			"floor": null,
+			"latitude": 37.3713131,
+			"longitude": -121.8778779,
+			"speed": 0,
+			"timestamp": 1659547376850,
+			"is_mocked": false,
+			"altitude": -1.3000000715255737,
+			"accuracy": 13.390000343322754,
+			"heading": 0,
+			"speed_accuracy": 0
+		}
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "hlUPsBxAXB8AwjVdazPl",
+	"timestamp": {
+		"_seconds": 1659366476,
+		"_nanoseconds": 392000000
+	},
+	"colours": {
+		"id": "uSY2mu4Z2MXCLMiiCQv1",
+		"colour": "#FF4B26",
+		"timestamp": {
+			"_seconds": 1659366568,
+			"_nanoseconds": 756000000
+		}
+	},
+	"location": [{
+		"id": "2oBizBphhhc22ThKi31B",
+		"details": {
+			"accuracy": 27.878000259399414,
+			"latitude": 52.5045272,
+			"floor": null,
+			"timestamp": 1659366564975,
+			"heading": 0,
+			"altitude": 103.80000305175781,
+			"speed": 0,
+			"is_mocked": false,
+			"longitude": 13.3455074,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}, {
+		"id": "M0QOe750ebWm43Et0OCv",
+		"permission": true,
+		"details": {
+			"latitude": 52.5045272,
+			"longitude": 13.3455074,
+			"speed": 0,
+			"accuracy": 27.878000259399414,
+			"altitude": 103.80000305175781,
+			"is_mocked": false,
+			"floor": null,
+			"heading": 0,
+			"timestamp": 1659366564975,
+			"speed_accuracy": 0
+		}
+	}, {
+		"id": "ar2rs6z63yVdi7nVrWJN",
+		"details": {
+			"timestamp": 1659366564975,
+			"altitude": 103.80000305175781,
+			"is_mocked": false,
+			"longitude": 13.3455074,
+			"speed_accuracy": 0,
+			"accuracy": 27.878000259399414,
+			"heading": 0,
+			"speed": 0,
+			"floor": null,
+			"latitude": 52.5045272
+		},
+		"permission": true
+	}, {
+		"id": "qq3OtUIijz8zh3Rupv70",
+		"permission": true,
+		"details": {
+			"latitude": 52.5044728,
+			"timestamp": 1659424706650,
+			"floor": null,
+			"altitude": 103.80000305175781,
+			"longitude": 13.3453482,
+			"accuracy": 32.63800048828125,
+			"speed_accuracy": 0,
+			"speed": 0,
+			"is_mocked": false,
+			"heading": 0
+		}
+	}],
+	"device": {
+		"id": "dKPaoxnArlAzrY9NRGcQ",
+		"details": {
+			"product": "taimen",
+			"brand": "google",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"tags": "release-keys",
+			"isPhysicalDevice": true,
+			"model": "Pixel 2 XL",
+			"systemFeatures": ["android.hardware.sensor.proximity", "com.verizon.hardware.telephony.lte", "com.verizon.hardware.telephony.ehrpd", "android.hardware.sensor.accelerometer", "android.software.controls", "android.hardware.faketouch", "android.hardware.telephony.euicc", "android.hardware.usb.accessory", "android.hardware.telephony.cdma", "android.software.backup", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.software.activities_on_secondary_displays", "android.hardware.wifi.rtt", "com.google.hardware.camera.easel", "com.google.android.feature.PIXEL_2017_EXPERIENCE", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.hardware.audio.low_latency", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "android.hardware.opengles.aep", "com.google.android.apps.photos.PIXEL_2017_PRELOAD", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "com.google.android.feature.GOOGLE_BUILD", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.sip.voip", "android.hardware.vr.high_performance", "android.hardware.usb.host", "android.hardware.audio.output", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.sensor.hifi_sensors", "android.hardware.screen.portrait", "android.hardware.nfc", "com.google.android.feature.TURBO_PRELOAD", "android.hardware.vr.headtracking", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.context_hub", "android.hardware.microphone", "android.software.autofill", "android.software.securely_removes_users", "android.software.vr.mode", "com.google.android.feature.PIXEL_EXPERIENCE", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.hardware.sensor.barometer", "android.software.app_widgets", "android.hardware.telephony.carrierlock", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "com.google.android.feature.ZERO_TOUCH", "android.hardware.screen.landscape", "android.software.device_id_attestation", "android.hardware.ram.normal", "android.software.managed_users", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "android.hardware.camera.any", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.hardware.camera.ar", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "android.software.app_enumeration", "com.google.android.apps.dialer.SUPPORTED", "android.hardware.camera.level.full", "android.hardware.wifi.direct", "android.software.live_wallpaper", "com.google.android.feature.GOOGLE_EXPERIENCE", "com.google.android.feature.EXCHANGE_6_2", "android.hardware.sensor.assist", "android.hardware.audio.pro", "android.hardware.nfc.hcef", "android.hardware.location.gps", "android.software.midi", "android.hardware.nfc.any", "android.hardware.nfc.hce", "android.hardware.wifi", "android.hardware.location", "android.hardware.vulkan.level", "android.hardware.wifi.aware", "android.software.secure_lock_screen", "android.hardware.telephony", "android.software.file_based_encryption", null],
+			"board": "taimen",
+			"id": "RP1A.201005.004.A1",
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"device": "taimen",
+			"fingerprint": "google/taimen/taimen:11/RP1A.201005.004.A1/6934943:user/release-keys",
+			"supported64BitAbis": ["arm64-v8a"],
+			"androidId": null,
+			"version": {
+				"previewSdkInt": 0,
+				"incremental": "6934943",
+				"baseOS": "",
+				"sdkInt": 30,
+				"release": "11",
+				"securityPatch": "2020-10-05",
+				"codename": "REL"
+			},
+			"hardware": "taimen",
+			"host": "abfarm-01392",
+			"type": "user",
+			"display": "RP1A.201005.004.A1",
+			"manufacturer": "Google",
+			"bootloader": "TMZ30m"
+		}
+	},
+	"timezone": {
+		"id": "lPNYtDzCqk5l2iQtaq0M",
+		"timezone": "CEST"
+	}
+}, {
+	"id": "n3CbJU7MvGTPjz9mj4ob",
+	"timestamp": {
+		"_seconds": 1659566120,
+		"_nanoseconds": 11000000
+	},
+	"colours": {
+		"id": "z9xjuGblrupvekKKnVQJ",
+		"timestamp": {
+			"_seconds": 1659566127,
+			"_nanoseconds": 109000000
+		},
+		"colour": "#8BCFD7"
+	},
+	"location": [{
+		"id": "aslVE82wcTWhoEGdgO57",
+		"details": {
+			"timestamp": 1659566114121,
+			"accuracy": 15.151000022888184,
+			"heading": 0,
+			"longitude": -0.3120809,
+			"speed": 0,
+			"altitude": 104.4000015258789,
+			"latitude": 51.0628672,
+			"speed_accuracy": 0,
+			"is_mocked": false,
+			"floor": null
+		},
+		"permission": true
+	}, {
+		"id": "iuG4XJpQ6bBfo5wsKdrj",
+		"details": {
+			"speed": 0,
+			"timestamp": 1659566114121,
+			"heading": 0,
+			"floor": null,
+			"speed_accuracy": 0,
+			"longitude": -0.3120809,
+			"latitude": 51.0628672,
+			"accuracy": 15.151000022888184,
+			"is_mocked": false,
+			"altitude": 104.4000015258789
+		},
+		"permission": true
+	}, {
+		"id": "toBTnqZxpd9NzfHubQpm",
+		"permission": true,
+		"details": {
+			"timestamp": 1659566114121,
+			"is_mocked": false,
+			"floor": null,
+			"heading": 0,
+			"speed": 0,
+			"latitude": 51.0628672,
+			"speed_accuracy": 0,
+			"accuracy": 15.151000022888184,
+			"altitude": 104.4000015258789,
+			"longitude": -0.3120809
+		}
+	}],
+	"device": {
+		"id": "rrL5C99t135O6SOivCKP",
+		"details": {
+			"type": "user",
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"hardware": "qcom",
+			"model": "ONEPLUS A6010",
+			"androidId": null,
+			"display": "ONEPLUS A6010_41_211125",
+			"version": {
+				"release": "11",
+				"baseOS": "",
+				"codename": "REL",
+				"securityPatch": "2021-11-01",
+				"sdkInt": 30,
+				"incremental": "2111252327",
+				"previewSdkInt": 0
+			},
+			"product": "OnePlus6T",
+			"id": "RKQ1.201217.002",
+			"manufacturer": "OnePlus",
+			"tags": "release-keys",
+			"fingerprint": "OnePlus/OnePlus6T/OnePlus6T:11/RKQ1.201217.002/2111252327:user/release-keys",
+			"board": "sdm845",
+			"bootloader": "unknown",
+			"device": "OnePlus6T",
+			"isPhysicalDevice": true,
+			"supported64BitAbis": ["arm64-v8a"],
+			"systemFeatures": ["android.hardware.sensor.proximity", "oem.serial_cdev.support", "android.hardware.sensor.accelerometer", "android.software.controls", "android.hardware.faketouch", "oem.service.adb.tcp.port.support", "oem.dual.camera.calibration.enchilada", "android.hardware.usb.accessory", "oem.qcom.fastchager.support", "oem.dual.back.camera.support", "android.hardware.telephony.cdma", "android.software.backup", "oem.opcamera_manual_zsl.support", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.software.activities_on_secondary_displays", "oem.dcip3.support", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.hardware.audio.low_latency", "oem.lift_up_display.support", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "oem.background.control", "oem.otgSwitch.support", "android.hardware.opengles.aep", "oem.otg.positive.negative.plug.support", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "oem.breathLight.support", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "android.software.sip.voip", "android.hardware.se.omapi.ese", "oem.autobrightctl.animation.support", "oem.keyDefine.support", "oem.inexact.alarm", "oem.picture.color.mode.srgb", "oem.pdaf.not.support", "oem.dual.led.support", "android.hardware.usb.host", "android.hardware.audio.output", "android.software.verified_boot", "oem.display.adaptive.mode.support", "android.hardware.camera.flash", "android.hardware.camera.front", "oem.no_need_power_on_password.support", "android.hardware.screen.portrait", "android.hardware.nfc", "com.google.android.feature.TURBO_PRELOAD", "oem.hw.manufacturer.qualcomm", "oem.hapticsService.support", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "oem.dualsim.support", "com.oneplus.software.oos", "android.software.autofill", "oem.threeStageKey.support", "oem.gyroscope.support", "android.software.securely_removes_users", "oem.linear.motor.support", "android.hardware.bluetooth_le", "oem.prox.calibration.support", "android.hardware.sensor.compass", "com.oneplus.software.oos.11", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "oem.blackScreenGesture.support", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "android.hardware.screen.landscape", "android.software.device_id_attestation", "oem.new.dual.camera.calibration.support", "android.hardware.ram.normal", "oem.high.gain.mode.support", "android.software.managed_users", "com.oneplus.software.overseas", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "oem.op_intelligent_background_management.support", "oem.incall.notitle.support", "android.hardware.camera.any", "oem.op_legal_information.support", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "android.software.app_enumeration", "oem.threeScreenshot.support", "android.hardware.camera.level.full", "oem.secrecy.support", "oem.sar.sensor.support", "oem.product_info_dumpling.support", "android.hardware.wifi.direct", "android.software.live_wallpaper", "oem.vooc.fastchager.support", "oem.blackScreenGesture_2.support", "android.software.ipsec_tunnels", "oem.audiotuner.support", "oem.op_dark_mode.support", "oem.round.screen.support", "android.hardware.audio.pro", "oem.direct.support", "oem.new_led_color.support", "com.oneplus.software.oos.n_theme_ready", "android.hardware.nfc.hcef", "android.hardware.location.gps", "oem.hall.auto.test.support", "android.software.midi", "oem.timePoweroffWakeup.support", "android.hardware.nfc.any", "android.hardware.nfc.hce", "oem.ambient.support", "android.hardware.wifi", "android.hardware.location", "com.google.android.mainline.patchlevel.1", "android.hardware.vulkan.level", "oem.read_mode.support", "oem.otg.switch.support", "oem.finger.print.support", "oem.tty.support", "android.software.secure_lock_screen", "android.hardware.telephony", "android.software.file_based_encryption", null, "com.oneplus.mobilephone"],
+			"host": "rd-build-72",
+			"brand": "OnePlus",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"]
+		}
+	},
+	"timezone": {
+		"id": "MGzPUJzWUIT6tQfS3zbZ",
+		"timezone": "BST"
+	}
+}, {
+	"id": "qOT4XDzVnsGBJuakQiHQ",
+	"timestamp": {
+		"_seconds": 1659534108,
+		"_nanoseconds": 502000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "djH6Zx6SRA1QlZDJABtW",
+		"details": {
+			"timestamp": 1659534109049,
+			"altitude": -60.5,
+			"heading": 0,
+			"speed_accuracy": 0,
+			"longitude": 72.8290994,
+			"is_mocked": false,
+			"speed": 0,
+			"floor": null,
+			"latitude": 19.0929666,
+			"accuracy": 14.20300006866455
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "t1U5dF3IAeOcOF4IL3io",
+	"timestamp": {
+		"_seconds": 1659402074,
+		"_nanoseconds": 763000000
+	},
+	"colours": {
+		"id": "zsuiU4MqGZUoO5nQ8GHn",
+		"colour": "#8BCFD7",
+		"timestamp": {
+			"_seconds": 1659402086,
+			"_nanoseconds": 166000000
+		}
+	},
+	"location": [{
+		"id": "4jpcQCLbsWVpJYnQ5oww",
+		"permission": false,
+		"details": {}
+	}, {
+		"id": "Ae4aqoS9I3e5uWszk08X",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "IgkIHjW6ftWk4TaYIANe",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "P78A0Me3K0ijfgdJkwjQ",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "tDkIA35kO5ZE3CYozr5D",
+		"details": {},
+		"permission": false
+	}, {
+		"id": "ydO4ZkdQOyjZ0DfFzjjs",
+		"details": {},
+		"permission": false
+	}],
+	"device": {
+		"id": "fqj2lc1j4urcr7UgUkt9",
+		"details": {
+			"version": {
+				"baseOS": "",
+				"securityPatch": "2020-04-01",
+				"incremental": "3afd9",
+				"previewSdkInt": 0,
+				"release": "9",
+				"codename": "REL",
+				"sdkInt": 28
+			},
+			"manufacturer": "motorola",
+			"supportedAbis": ["armeabi-v7a", "armeabi"],
+			"tags": "release-keys",
+			"isPhysicalDevice": true,
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"hardware": "qcom",
+			"host": "ilclbld171",
+			"board": "msm8953",
+			"id": "PPS29.118-15-11-16",
+			"model": "moto g(6)",
+			"supported64BitAbis": [],
+			"display": "PPS29.118-15-11-16",
+			"device": "ali",
+			"brand": "motorola",
+			"androidId": null,
+			"fingerprint": "motorola/ali/ali:9/PPS29.118-15-11-16/3afd9:user/release-keys",
+			"systemFeatures": ["android.hardware.sensor.proximity", "com.motorola.motokey.mkprovider", "com.motorola.timezonedata.SUPPORTED", "android.software.adoptable_storage", "android.hardware.sensor.accelerometer", "android.hardware.faketouch", "com.motorola.software.product.ali_retail", "android.hardware.usb.accessory", "android.hardware.telephony.cdma", "android.software.backup", "com.motorola.software.fmradioservice", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.hardware.ethernet", "android.software.activities_on_secondary_displays", "com.motorola.software.x_line", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "android.hardware.sensor.gyroscope", "android.software.cant_save_state", "com.motorola.camera2", "android.hardware.opengles.aep", "com.motorola.motodisplay.6.0", "com.motorola.faceunlock", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "com.motorola.launcher3.gridcustomization", "android.hardware.telephony.gsm", "com.motorola.software.guideme", "android.software.sip.voip", "com.motorola.photoeditor", "android.hardware.usb.host", "com.motorola.motokey", "android.hardware.audio.output", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.screen.portrait", "com.motorola.motodisplay.doze.glimpse", "com.dolby.dax2appUI", "com.google.android.feature.TURBO_PRELOAD", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "android.software.autofill", "com.motorola.software.device.ali", "com.google.preload_photos", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "android.software.device_admin", "com.motorola.software.mya", "com.google.android.feature.WELLBEING", "android.hardware.wifi.passpoint", "android.hardware.camera", "com.google.android.feature.ZERO_TOUCH", "android.hardware.screen.landscape", "android.hardware.ram.normal", "com.motorola.hardware.tier.G", "android.software.managed_users", "com.motorola.help", "com.motorola.moto", "com.motorola.hardware.wave.2018.1", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.capability.manual_post_processing", "android.hardware.camera.any", "android.hardware.camera.capability.raw", "android.hardware.vulkan.compute", "android.software.connectionservice", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "android.software.cts", "android.software.sip", "android.hardware.camera.capability.manual_sensor", "com.google.android.apps.dialer.SUPPORTED", "android.hardware.camera.level.full", "com.motorola.msimsettings", "com.motorola.arselfie", "android.hardware.wifi.direct", "android.software.live_wallpaper", "com.motorola.launcher3.twoline", "com.motorola.launcher3", "com.motorola.aov.bt_sco_v1", "com.motorola.actions", "com.motorola.aov.dsp_v4", "android.hardware.location.gps", "android.software.midi", "com.motorola.aov.ap_v4", "com.motorola.easyprefix", "android.hardware.wifi", "android.hardware.location", "android.hardware.vulkan.level", "com.uros.software.goodspeed", "com.motorola.motokey.fpsfallback", "android.hardware.telephony", null],
+			"bootloader": "0xC111",
+			"product": "ali",
+			"type": "user"
+		}
+	},
+	"timezone": {
+		"id": "QgDWAUwCppM998QSo7Rl",
+		"timezone": "PDT"
+	}
+}, {
+	"id": "vzP3JfA6k85W0Jrc3gYy",
+	"timestamp": {
+		"_seconds": 1659746206,
+		"_nanoseconds": 175000000
+	},
+	"colours": {},
+	"location": [{
+		"id": "B3lNKcjDyga3DEwlCnBP",
+		"permission": true,
+		"details": {
+			"altitude": -1.3000000715255737,
+			"timestamp": 1659746206528,
+			"latitude": 37.3713074,
+			"accuracy": 13.380999565124512,
+			"speed_accuracy": 0,
+			"floor": null,
+			"heading": 0,
+			"longitude": -121.8778893,
+			"is_mocked": false,
+			"speed": 0
+		}
+	}, {
+		"id": "gJDHFGdRy5qc433lzo1B",
+		"details": {
+			"altitude": -1.3000000715255737,
+			"heading": 0,
+			"floor": null,
+			"longitude": -121.8778893,
+			"speed": 0,
+			"timestamp": 1659746206528,
+			"is_mocked": false,
+			"latitude": 37.3713074,
+			"speed_accuracy": 0,
+			"accuracy": 13.380999565124512
+		},
+		"permission": true
+	}],
+	"device": {},
+	"timezone": {}
+}, {
+	"id": "xHzgqTPYOX3UnsXrur9H",
+	"timestamp": {
+		"_seconds": 1659521590,
+		"_nanoseconds": 632000000
+	},
+	"colours": {
+		"id": "5NyNKpz5OVxzkCtgDnDj",
+		"colour": "#8BCFD7",
+		"timestamp": {
+			"_seconds": 1659521596,
+			"_nanoseconds": 0
+		}
+	},
+	"location": [{
+		"id": "XZoCgfBMxS9GjIruVHN6",
+		"details": {
+			"longitude": 21.0185206,
+			"speed": 0,
+			"floor": null,
+			"accuracy": 13.777999877929688,
+			"latitude": 52.2253935,
+			"altitude": 145,
+			"timestamp": 1659521597110,
+			"is_mocked": false,
+			"heading": 0,
+			"speed_accuracy": 0
+		},
+		"permission": true
+	}],
+	"device": {
+		"id": "SPiaXbKaiC3xDPl4uEMg",
+		"details": {
+			"board": "exynos9611",
+			"brand": "samsung",
+			"host": "VPDJR1012",
+			"supported32BitAbis": ["armeabi-v7a", "armeabi"],
+			"hardware": "exynos9611",
+			"id": "RP1A.200720.012",
+			"model": "SM-M317F",
+			"device": "m31s",
+			"display": "RP1A.200720.012.M317FXXU2CUB1",
+			"product": "m31snseea",
+			"androidId": null,
+			"systemFeatures": ["android.hardware.sensor.proximity", "com.samsung.android.sdk.camera.processor", "com.samsung.feature.aodservice_v08", "com.sec.feature.motionrecognition_service", "com.sec.feature.cover.sview", "android.hardware.sensor.accelerometer", "android.software.controls", "android.hardware.faketouch", "android.hardware.usb.accessory", "android.software.backup", "android.hardware.touchscreen", "android.hardware.touchscreen.multitouch", "android.software.print", "android.software.activities_on_secondary_displays", "com.samsung.feature.SAMSUNG_EXPERIENCE", "com.google.android.feature.ACCESSIBILITY_PRELOAD", "android.software.voice_recognizers", "android.software.picture_in_picture", "android.hardware.fingerprint", "com.samsung.android.knox.knoxsdk", "android.hardware.sensor.gyroscope", "android.hardware.audio.low_latency", "android.software.vulkan.deqp.level", "android.software.cant_save_state", "com.samsung.feature.device_category_phone", "com.samsung.android.nfc.t4temul", "android.hardware.opengles.aep", "com.sec.feature.fingerprint_manager_service", "com.sec.feature.sensorhub", "com.sec.feature.overlaymagnifier", "android.hardware.bluetooth", "android.hardware.camera.autofocus", "android.hardware.telephony.gsm", "android.hardware.telephony.ims", "com.sec.feature.cocktailpanel", "com.samsung.android.bio.face", "android.software.sip.voip", "com.sec.feature.saccessorymanager", "android.hardware.usb.host", "android.hardware.audio.output", "android.software.verified_boot", "android.hardware.camera.flash", "android.hardware.camera.front", "android.hardware.se.omapi.uicc", "android.hardware.screen.portrait", "com.google.android.feature.DPS", "android.hardware.nfc", "com.google.android.feature.TURBO_PRELOAD", "com.samsung.feature.ipsgeofence", "com.samsung.feature.samsung_experience_mobile_lite", "com.nxp.mifare", "android.hardware.sensor.stepdetector", "android.software.home_screen", "android.hardware.microphone", "com.samsung.feature.aremoji.v2", "android.software.autofill", "com.samsung.android.sdk.camera.processor.effect", "android.software.securely_removes_users", "android.hardware.bluetooth_le", "android.hardware.sensor.compass", "android.hardware.touchscreen.multitouch.jazzhand", "android.software.app_widgets", "android.software.input_methods", "android.hardware.sensor.light", "android.hardware.vulkan.version", "android.software.companion_device_setup", "com.google.android.feature.EEA_V2_DEVICE", "com.sec.feature.cover.minisviewwalletcover", "com.samsung.feature.galaxyfinder_v7", "android.software.device_admin", "android.hardware.wifi.passpoint", "android.hardware.camera", "android.hardware.screen.landscape", "android.hardware.ram.normal", "com.samsung.feature.samsungpositioning.snlp", "com.samsung.android.api.version.2402", "com.samsung.android.api.version.2403", "com.samsung.android.api.version.2501", "com.samsung.android.api.version.2502", "com.samsung.android.api.version.2601", "com.samsung.android.api.version.2701", "com.samsung.android.api.version.2801", "com.samsung.android.api.version.2802", "com.samsung.android.api.version.2803", "com.samsung.android.api.version.2901", "com.samsung.android.api.version.2902", "com.samsung.android.api.version.2903", "com.samsung.android.api.version.3001", "com.sec.feature.cover", "android.software.managed_users", "com.sec.feature.nsflp", "android.software.webview", "android.hardware.sensor.stepcounter", "android.hardware.camera.any", "android.hardware.vulkan.compute", "android.software.connectionservice", "android.hardware.touchscreen.multitouch.distinct", "android.hardware.location.network", "com.sec.android.secimaging", "android.software.cts", "android.software.sip", "android.software.app_enumeration", "com.google.android.feature.EEA_DEVICE", "android.hardware.wifi.direct", "android.software.live_wallpaper", "android.software.ipsec_tunnels", "com.google.android.paid.chrome", "android.software.freeform_window_management", "android.hardware.nfc.hcef", "android.hardware.nfc.uicc", "android.hardware.location.gps", "android.software.midi", "com.samsung.feature.samsungpositioning", "android.hardware.nfc.any", "android.hardware.nfc.hce", "android.hardware.wifi", "android.hardware.location", "com.google.android.paid.search", "android.hardware.vulkan.level", "android.software.secure_lock_screen", "android.hardware.biometrics.face", "android.hardware.telephony", "com.sec.android.smartface.smart_stay", "android.software.file_based_encryption", null],
+			"supported64BitAbis": ["arm64-v8a"],
+			"isPhysicalDevice": true,
+			"type": "user",
+			"bootloader": "M317FXXU2CUB1",
+			"supportedAbis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
+			"manufacturer": "samsung",
+			"tags": "release-keys",
+			"fingerprint": "samsung/m31snseea/m31s:11/RP1A.200720.012/M317FXXU2CUB1:user/release-keys",
+			"version": {
+				"sdkInt": 30,
+				"securityPatch": "2021-02-01",
+				"baseOS": "",
+				"previewSdkInt": 0,
+				"incremental": "M317FXXU2CUB1",
+				"release": "11",
+				"codename": "REL"
+			}
+		}
+	},
+	"timezone": {
+		"id": "vrFUxoGS2wruK20qd4OE",
+		"timezone": "CEST"
+	}
+}]
