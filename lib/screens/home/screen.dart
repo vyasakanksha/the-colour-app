@@ -407,10 +407,10 @@ class HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (_) {
         return const AlertDialog(
-          title: Text("So What is the Colour App?"),
-          content: Text(
-              "Every 24 hours you pick a colour. The app collects information about you, quietly, in the background. This is the same information that most other apps on your phone collect to optimize your buying patterns. In a few weeks digital compositions will appear on the app, where artists use data as random input to create dynamic, constantly evolving works of art. As new data comes in the old gets deleted, and is never used for anything else.\n\n\nTogether we are exploring our relationship with our personal data, and what ownership of personal data means in today's world. Hopefully though this project we can take some of that ownership back.\n\n\nStart picking colours, compositions will show up soon."),
-        );
+            title: Text("So What is the Colour App?"),
+            scrollable: true,
+            content: Text(
+                "The colour app explores our relationship with technology and how much of ourselves we give away to it everyday. The apps on your phone collect data to optimize your buying patterns and target ads for you. Using the same data, the colour app presents you with dynamic digital art.\n\n\nEvery 24 hours you pick a colour. Our digial artists collective use this data as random input to create dynamic, constantly evolving works of art. As new data comes in the old gets deleted, and is never used for anything else.\n\n\nTogether we are exploring our relationship with our personal data, and what ownership of personal data means in today's world. Hopefully through this project we can take some of that ownership back.\n\n\nThe app uses Location, Timezone, and Device Details. Don't worry, all your data is anonymized, it is never used for any commercial purposes, nobody has direct access to it, and we never store historic data."));
       },
     );
   }
