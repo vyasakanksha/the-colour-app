@@ -611,6 +611,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  p5:
+    dependency: "direct main"
+    description:
+      name: p5
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   package_config:
     dependency: transitive
     description:
